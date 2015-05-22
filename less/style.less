@@ -1,33 +1,76 @@
-.container{
+
+
+body #modul4{
 
  @font-face {
  	font-family:"Gudeaitalic";
- src:url("Gudea-Italic.eot?") format("eot"),
- url("Gudea-Italic.woff") format("woff"),
- url("Gudea-Italic.ttf") format("truetype"),
- url("Gudea-Italic.svg#Gudea-Italic") format("svg");
+ src:url("../fonts/Gudea-Italic.eot?") format("eot"),
+ url("../fonts/Gudea-Italic.woff") format("woff"),
+ url("../fonts/Gudea-Italic.ttf") format("truetype"),
+ url("../fonts/Gudea-Italic.svg#Gudea-Italic") format("svg");
  font-weight:normal;
  font-style:normal;
 }
 @font-face {
 	font-family:"Gudea";
- src:url("Gudea-Regular.eot?") format("eot"),
- url("Gudea-Regular.woff") format("woff"),
- url("Gudea-Regular.ttf") format("truetype"),
- url("Gudea-Regular.svg#Gudea") format("svg");
- font-weight:normal;
- font-style:normal;
-}
+	 src:url("../fonts/Gudea-Regular.eot?") format("eot"),
+	 url("../fonts/Gudea-Regular.woff") format("woff"),
+	 url("../fonts/Gudea-Regular.ttf") format("truetype"),
+	 url("../fonts/Gudea-Regular.svg#Gudea") format("svg");
+	 font-weight:normal;
+	 font-style:normal;
+    }
 
 @font-face {
 	font-family:"Gudeabold";
-src:url("Gudea-Bold.eot?") format("eot"),
-url("Gudea-Bold.woff") format("woff"),
-url("Gudea-Bold.ttf") format("truetype"),
-url("Gudea-Bold.svg#Gudea-Bold") format("svg");
-font-weight:normal;
-font-style:normal;
-}
+	src:url("../fonts/Gudea-Bold.eot?") format("eot"),
+	url("../fonts/Gudea-Bold.woff") format("woff"),
+	url("../fonts/Gudea-Bold.ttf") format("truetype"),
+	url("../fonts/Gudea-Bold.svg#Gudea-Bold") format("svg");
+	font-weight:normal;
+	font-style:normal;
+    }
 
 	
+
+	.container-fluid{
+		.petitboul{
+	background-color: #1d1e22;
+	margin-top: 150px;
+	background-image: url(../images/boul.png);
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: cover;
+		}
+		img{
+			margin-top: 50px;
+			&.boderraduis{
+               background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+			    border: 2px solid #333437;
+			    border-radius: 50%;
+			    height: 80px;
+			    width: 80px;			}
+		}
+		h3{
+			font-size: 26px;
+			font-family: 'nexulight';
+			color: #fff;
+			
+		}
+		p{
+			font-size: 15px;
+			font-family:"Gudea";
+			color: #54555a;
+			margin: 0px;
+			
+		}
+		.borderbottom{
+          border-bottom: 2px solid #bb272f;
+          margin-bottom: 25px;
+          margin-top: 20px;
+          width: 80px;
+		}
+	}
 }
+	
+
