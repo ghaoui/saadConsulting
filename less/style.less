@@ -192,6 +192,12 @@
 					margin-left: 15px;
                     margin-top: 10px;
                     background-color: #19151f;
+                    @media (max-width: 1199px) {
+                      margin-left: 5px;
+			        }
+			        @media (max-width: 992px) {
+                      margin-left: 3px;
+			        }
 					a{
 						i{
 							font-size: 24px;
@@ -244,8 +250,17 @@
            	&.footernav{
 				margin-top: 25px;
 				margin-bottom: 20px;
+				@media (max-width: 767px) {
+		          text-align: center;
+		        }
 				li{
 					padding-left: 17px;
+					@media (max-width: 1199px) {
+                      padding-left: 6px;
+			        }
+			        @media (max-width: 992px) {
+                      padding-left: 1px;
+			        }
 					a{
 						list-style: none;
 						text-decoration: none;
@@ -262,6 +277,9 @@
 			font-size: 15px;
 			font-family:"Gudea";
 			margin-bottom: 20px;
+			@media (max-width: 767px) {
+              text-align: center;
+	        }
            }
 		}
 	}
