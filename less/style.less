@@ -234,6 +234,9 @@
           }
 		}
 		.email{
+			    @media (max-width: 767px) {
+                      margin-bottom: 20px;
+			    }
 			i{
                color: #8c8c8e;
 				font-size: 24px;
@@ -246,6 +249,10 @@
 		}
 		.bgtransparanblack{
            background-color: #14111c;	
+           background-image: url(../images/boul.png);
+			background-repeat:no-repeat;
+			background-position: center;
+			background-size: cover;
            ul{
            	&.footernav{
 				margin-top: 25px;
@@ -281,6 +288,90 @@
               text-align: center;
 	        }
            }
+		}
+	}
+	.bggray{
+		background-color: #f8f8f8;
+		h3{
+			font-size: 30px;
+			 font-family: 'nexa_bold';
+			 color: #000000;
+			 margin-bottom: 45px;
+			 &::after {
+			    border-bottom: medium solid #000;
+			    bottom: 35px;
+			    content: "";
+			    font-size: 32px;
+			    left: 0;
+			    margin: 0 auto;
+			    position: absolute;
+			    right: 0;
+			    top: 0;
+			    width: 60px;
+			}
+		}
+		.blogimg1{
+			background-color: #fff;
+			@media (max-width : 767px) {
+					width: 93%;
+				}
+			img{
+             margin-bottom: 10px;				
+			}
+			span{
+				font-size: 16px;
+				font-family:"Gudea";
+				color: #000000;
+				font-weight: bold;
+				&.styledate{
+              margin-left: 15px;
+                @media (max-width : 992px) {
+					margin-left: 5px;
+				}
+			  }
+			}
+			p{
+				font-size: 16px;
+				font-family:"Gudea";
+				color: #b1b1b3;
+				&.styletext{
+				  margin-top: 5px;
+	              margin-left: 15px;
+	              width: 88%;
+	              padding-bottom: 10px;
+	                @media (max-width : 992px) {
+					   margin-left: 5px;
+				    }
+			    }
+			}
+		}
+		.marglink{
+			margin-top: 20px;
+			margin-bottom: 30px;
+           a{
+			background-color: #be1d2d;
+		    border-radius: 7px;
+		    color: #fff;
+		    padding: 10px 40px;
+		    font-family: 'nexa_light';
+		    font-size: 14px;
+		    text-decoration: none;
+		    font-weight: bold;
+		   }
+		
+		}
+		
+		.deplacementblock5{
+			position: relative;
+            top: -70px;
+		}
+		.deplacementblock7{
+			position: relative;
+            top: -70px;
+		}
+		.deplacementblock8{
+			position: relative;
+            top: -45px;
 		}
 	}
 }
