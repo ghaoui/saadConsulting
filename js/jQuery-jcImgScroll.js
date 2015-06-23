@@ -70,7 +70,7 @@
 						return "<dl style=\"z-index:11;width:"+w+"px;height:"+h+"px;position:absolute;left:"+l+"px;top:"+t+"px;\">"+ list +"<dl>";
 					};
 					this.arrow = function(l,r,w,h,x,y){
-						return "<em class=\"sPrev\" id=\"sPrev\" style=\"position:absolute;cursor:pointer;z-index:10;width:"+w+"px;height:"+h+"px;left:"+(l-w-x)+"px;\"></em><em class=\"sNext\" id=\"sNext\" style=\"position:absolute;cursor:pointer;z-index:10;width:"+w+"px;height:"+h+"px;left:"+(r+x)+"px;top:"+y+"px;\"></em>";
+						// return "<em class=\"sPrev\" id=\"sPrev\" style=\"position:absolute;cursor:pointer;z-index:10;width:"+w+"px;height:"+h+"px;left:"+(l-w-x)+"px;\"></em><em class=\"sNext\" id=\"sNext\" style=\"position:absolute;cursor:pointer;z-index:10;width:"+w+"px;height:"+h+"px;left:"+(r+x)+"px;top:"+y+"px;\"></em>";
 					};
 					this.hoverDom = function(t,w,h,b,bg,p,c,lh){
 						return "<div style=\"display:none;cursor:pointer;border:"+b+"px solid "+bg+";width:"+(w-b*2)+"px;height:"+(h-b*2)+"px;position:absolute;z-index:1;\"></div><b style=\"display:none;padding:0 "+p+"px;width:"+(w-p*2-b*2)+"px;color:"+c+";text-shadow:none;background:"+bg+";position:absolute;z-index:2;left:"+b+"px;bottom:"+b+"px;height:0px;overflow:hidden;line-height:"+(lh+5)+"px;\">"+ t +"</b>";
@@ -129,7 +129,7 @@
 							    "height":options.height,
 								"position":"absolute",
 								"display":"none",
-								"overflow":"hidden",
+								// "overflow":"hidden",
 								"z-index":0
 							  });
 					//创建图片对象
