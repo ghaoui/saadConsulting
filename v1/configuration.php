@@ -54,8 +54,8 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = 'D:\\xampp\\htdocs\\saadConsulting\\v1/logs';
-	public $tmp_path = 'D:\\xampp\\htdocs\\saadConsulting\\v1/tmp';
+	public $log_path = 'D:\\xampp\\htdocs\\saadconsult\\v1/logs';
+	public $tmp_path = 'D:\\xampp\\htdocs\\saadconsult\\v1/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 }

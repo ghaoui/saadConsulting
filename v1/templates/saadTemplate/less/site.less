@@ -1,0 +1,276 @@
+body{
+	
+}
+
+//header
+header{
+	background-image: url("../images/header.png");
+	.headerlanguage{
+		.mod-languages {
+		    background: url("../images/psb_select_lg.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+		}
+
+	}
+	.headermenu{
+		ul{
+
+			li{
+			    float: left;
+			    width : 144px;
+			    a{
+			    	color: #ffffff;
+				    cursor: pointer;
+				    display: block;
+				    font-size: 13px;
+				    text-align: left;
+				    text-decoration: none;
+				    text-transform: uppercase;
+				    transition: color 0.2s ease-out 0s;
+				    padding-bottom: 15px;
+				    padding-left: 35px;
+				    padding-top: 10px;
+			    	&.hebergement{
+			    		background: url("../images/menu/bouton-hebergement-off.png") no-repeat scroll left center transparent;
+			    		&:hover{
+			    			background: url("../images/menu/bouton-hebergement-over.png") no-repeat scroll left center transparent;
+			    		}
+			    	}
+			    	&.abonnement{
+			    		background: url("../images/menu/bouton-abonnement-off.png") no-repeat scroll left center transparent;
+			    		&:hover{
+			    			background: url("../images/menu/bouton-abonnement-over.png") no-repeat scroll left center transparent;
+			    		}
+			    	}
+			    	&.activites{
+			    		background: url("../images/menu/bouton-activites-off.png") no-repeat scroll left center transparent;
+			    		&:hover{
+			    			background: url("../images/menu/bouton-activites-over.png") no-repeat scroll left center transparent;
+			    		}
+			    	}
+			    	&.panier{
+			    		background: url("../images/menu/bouton-panier-off.png") no-repeat scroll left center transparent;
+			    		&:hover{
+			    			background: url("../images/menu/bouton-panier-over.png") no-repeat scroll left center transparent;
+			    		}
+			    	}
+			    }
+			    &.active{
+			    	a{
+			    		color: #3d1c10;
+			    		&.hebergement{
+			    			background: url("../images/menu/bouton-hebergement-on.png") no-repeat scroll left center transparent;
+			    		}
+			    		&.abonnement{
+							background: url("../images/menu/bouton-abonnement-on.png") no-repeat scroll left center transparent;
+			    		}
+			    		&.activites{
+							background: url("../images/menu/bouton-activites-on.png") no-repeat scroll left center transparent;
+			    		}
+			    		&.panier{
+							background: url("../images/menu/bouton-panier-on.png") no-repeat scroll left center transparent;
+			    		}
+			    	}
+			    }
+			}
+
+		}
+		.navbar-header{
+			button{
+				span{
+					background-color : #fff;
+				}
+				background-color : #3d1c10;
+				float : left;
+			}
+			
+		}
+		@media screen and (max-width: 767px) {
+			#navbar-collapse{
+			    ul{
+			    	li{
+			    		border-bottom : 1px solid #fff;
+			    		background-color : #432A18;
+			    		a{
+			    			background : none;
+			    			padding-left: 50px;
+			    			&.hebergement{
+				    			background: url("../images/menu/hebergement-off.png") no-repeat scroll left 5px center / auto 33px transparent;
+				    		}
+				    		&.abonnement{
+								background: url("../images/menu/abonnement-off.png") no-repeat scroll left 5px center / auto 33px transparent;
+				    		}
+				    		&.activites{
+								background: url("../images/menu/activities-off.png") no-repeat scroll left 5px center / auto 33px transparent;
+				    		}
+				    		&.panier{
+								background: url("../images/menu/panier-off.png") no-repeat scroll left 5px center / auto 33px transparent;
+				    		}
+			    		}
+			    		&:hover{
+			    			background: linear-gradient(to left, #3d1c10, #77431a) repeat scroll 0 0 rgba(0, 0, 0, 0);
+			    			a{
+			    				
+			    				
+			    			}
+			    		}
+			    		&.active, &.active:hover{
+			    			background : #fff;
+				    		a{
+				    			color : #3d1c10;
+				    			&.hebergement{
+					    			background: url("../images/menu/hebergement-on.png") no-repeat scroll left 5px center / auto 33px transparent;
+					    		}
+					    		&.abonnement{
+									background: url("../images/menu/abonnement-on.png") no-repeat scroll left 5px center / auto 33px transparent;
+					    		}
+					    		&.activites{
+									background: url("../images/menu/activities-on.png") no-repeat scroll left 5px center / auto 33px transparent;
+					    		}
+					    		&.panier{
+									background: url("../images/menu/panier-on.png") no-repeat scroll left 5px center / auto 33px transparent;
+					    		}
+				    		}
+			    		}
+			    	}
+			    }
+
+			}
+		}
+	}
+	.subheader{
+
+		a{
+			background-image: url("../images/bouton-site_original-psb.png");
+		    background-repeat: no-repeat;
+		    border-radius: 20px;
+		    color: #3d1c10;
+		    display: inline-block;
+		    font-family: Georgia,Times New Roman,Times,serif;
+		    font-size: 16px;
+		    font-style: italic;
+		    font-weight: bold;
+		    line-height: 38px;
+		    padding: 0 10px 0 40px;
+		    float : right;
+		}
+	}
+}
+
+// footer
+footer{
+	div.container{
+		background: linear-gradient(to left, #3d1c10, #77431a) repeat scroll 0 0 rgba(0, 0, 0, 0);
+		.toleft{
+			padding: 15px 0px 15px 20px;
+			 margin: 10px 0;
+			.telephone {
+			    background-image: url("../images/footer/phone.png");
+			    background-repeat: no-repeat;
+			    color: #fff;
+			    height: 33px;
+			    padding-left: 38px;
+			    padding-top: 5px;
+			}
+			.email {
+			    background-image: url("../images/footer/mail.png");
+			    background-repeat: no-repeat;
+			    height: 33px;
+			    padding-left: 38px;
+			    padding-top: 5px;
+			    a{
+			    	color : #fff;
+			    }
+			}
+			ul {
+				padding-left : 0px;
+				li{
+					display: inline;
+					float: left;
+					a{
+						color: #fff;
+					}
+				}
+			    display: inline-block;
+			    list-style: outside none none;
+			    &.linkstation {
+				    font-size: 18px;
+				    margin-top: 5px;
+				    li{
+				    	margin-right: 20px;
+				    }
+				    @media (min-width: 992px) and (max-width: 1199px) {
+				    	font-size : 14px;
+				    }
+				}
+				&.linkregle {
+				    font-size: 12px;
+				    margin-top: 10px;
+				    @media (min-width: 992px) and (max-width: 1199px) {
+				    	font-size : 10px;
+				    }
+				}
+
+			}
+			.copyright {
+			    color: #fff;
+			    font-size: 12px;
+			    @media (min-width: 992px) and (max-width: 1199px) {
+			    font-size : 10px;
+			    }
+			}
+		}
+		.toright{
+			padding: 15px 20px 15px 0px;
+			margin: 10px 0;
+			.social {
+			    margin-bottom: 50px;
+			    text-align: right;
+			    width: 100%;
+			    ul {
+				    display: inline-block;
+				    list-style: outside none none;
+				    margin: 0;
+				    li {
+					    background-repeat: no-repeat;
+					    cursor: pointer;
+					    display: inline-block;
+					    height: 33px;
+					    margin-left: 15px;
+					    width: 33px;
+					    &.facebook{
+					    	background-image: url("../images/footer/facebook.png");
+					    }
+					    &.twitter {
+						    background-image: url("../images/footer/twitter.png");
+						}
+					    &.gplus {
+						    background-image: url("../images/footer/gplus.png");
+						}
+					}
+				}
+				@media screen and (max-width: 767px) {
+					text-align : center;
+				}
+			}
+		}
+	}
+}
+.moduletable{
+	&.achatAbonnement{
+		
+
+	    h3{
+	    	border: medium none;
+		    box-shadow: none;
+		    color: #fff;
+		    background-color: #3d1c10;
+	    background-image: url("../../../images/com_hotel/fleche.png");
+	    background-position: left top;
+	    background-repeat: no-repeat;
+	    }
+	    .custom.achatAbonnement{
+	    	background-color: #ebe2d2;
+		    color: #282c2e;
+	    }
+	}
+}
