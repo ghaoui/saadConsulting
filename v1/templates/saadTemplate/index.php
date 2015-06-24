@@ -75,7 +75,6 @@ else
 	<link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/bootstrap.min.css">
 	<link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/template.css">
     <link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/jquery-ui.css">
-    <link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/animate.css">
 	<jdoc:include type="head" />
 
 	<!-- Add JavaScript 
@@ -101,7 +100,7 @@ else
 
 <section id="menu">
     <div class="container-fluid">
-        <div class="row dichetnav menu">
+        <div class="row  menu">
             <div class="col-lg-2 col-md-1 col-sm-1 xs-hidden"></div>
             <?php if ($this->countModules('menu')) : ?>
             <div class="col-lg-2  col-md-2 col-sm-3 col-xs-12 navbar-header">

@@ -30,14 +30,14 @@
   font-weight: normal;
   font-style: normal;
 }
-.container-fluid .dichetnav {
+.container-fluid .menu {
   background-image: url(../images/dichet.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-bottom: 30px;
 }
-.container-fluid .dichetnav .navbar-header button {
+.container-fluid .menu .navbar-header button {
   background-color: #15161a;
   bottom: -15px;
   float: left;
@@ -45,14 +45,14 @@
   right: 15px;
   top: 16px;
 }
-.container-fluid .dichetnav .navbar-header button span {
+.container-fluid .menu .navbar-header button span {
   background-color: #fff;
 }
-.container-fluid .dichetnav .navbar-header a {
+.container-fluid .menu .navbar-header a {
   margin-top: 10px;
 }
 @media (max-width: 767px) {
-  .container-fluid .dichetnav .navbar-collapse {
+  .container-fluid .menu .navbar-collapse {
     position: absolute;
     top: 91px;
     width: 100%;
@@ -60,51 +60,83 @@
     background-color: #fff;
   }
 }
-.container-fluid .dichetnav .navbar-collapse ul {
+.container-fluid .menu .navbar-collapse ul {
   margin-top: 24px;
 }
-.container-fluid .dichetnav .navbar-collapse ul li {
+.container-fluid .menu .navbar-collapse ul li {
   float: left;
 }
 @media (max-width: 767px) {
-  .container-fluid .dichetnav .navbar-collapse ul li {
+  .container-fluid .menu .navbar-collapse ul li {
     display: block;
     width: 100%;
   }
 }
-.container-fluid .dichetnav .navbar-collapse ul li a {
+.container-fluid .menu .navbar-collapse ul li a {
   color: #535054;
   font-size: 18px;
   font-family: "Gudea";
 }
-.container-fluid .dichetnav .navbar-collapse ul li a:hover {
+.container-fluid .menu .navbar-collapse ul li a:hover {
   background: none;
 }
-.container-fluid .petitboul {
+.container-fluid .carousel .slide {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.container-fluid .carousel .slide h3 {
+  font-size: 40px;
+  font-family: 'nexa_light';
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0px;
+}
+.container-fluid .carousel .slide h2 {
+  font-size: 50px;
+  font-family: 'nexa_bold';
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0px;
+}
+.container-fluid .carousel .slide a {
+  color: #fff;
+  border-radius: 5px;
+  background-color: #e6423a;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-family: 'nexa_light';
+  color: #f8f8f8;
+}
+.container-fluid .sectionwork {
   background-color: #1d1e22;
   background-image: url(../images/boul.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.container-fluid .petitboul img {
+.container-fluid .sectionwork img {
   margin-top: 50px;
 }
-.container-fluid .petitboul img.boderraduis {
+.container-fluid .sectionwork img.boderraduis {
   background: rgba(0,0,0,0) none repeat scroll 0 0;
   border: 2px solid #333437;
   border-radius: 50%;
   height: 80px;
   width: 80px;
 }
-.container-fluid .petitboul h3 {
+.container-fluid .sectionwork h3 {
   font-size: 26px;
   font-family: 'nexa_light';
   color: #fff;
   position: relative;
   margin-bottom: 40px;
 }
-.container-fluid .petitboul h3::after {
+.container-fluid .sectionwork h3::after {
   border-bottom: medium solid #bb272f;
   bottom: -23px;
   color: #bed52b;
@@ -116,7 +148,7 @@
   right: 0;
   width: 80px;
 }
-.container-fluid .petitboul p {
+.container-fluid .sectionwork p {
   font-size: 15px;
   font-family: "Gudea";
   color: #54555a;
@@ -266,16 +298,16 @@
     margin-bottom: 30px;
   }
 }
-.bggray {
+.Blog {
   background-color: #f8f8f8;
 }
-.bggray h3 {
+.Blog h3 {
   font-size: 30px;
   font-family: 'nexa_bold';
   color: #000000;
   margin-bottom: 45px;
 }
-.bggray h3::after {
+.Blog h3::after {
   border-bottom: medium solid #000;
   bottom: 35px;
   content: "";
@@ -287,67 +319,67 @@
   top: 0;
   width: 60px;
 }
-.bggray .blogimg1 {
+.Blog .blogimg1 {
   background-color: #fff;
 }
 @media (max-width: 992px) {
-  .bggray .blogimg1 {
+  .Blog .blogimg1 {
     width: 90%;
   }
 }
 @media (max-width: 767px) {
-  .bggray .blogimg1 {
+  .Blog .blogimg1 {
     width: 95%;
   }
 }
-.bggray .blogimg1 img {
+.Blog .blogimg1 img {
   margin-bottom: 10px;
 }
-.bggray .blogimg1 span {
+.Blog .blogimg1 span {
   font-size: 16px;
   font-family: "Gudea";
   color: #000000;
   font-weight: bold;
 }
 @media (max-width: 767px) {
-  .bggray .blogimg1 span {
+  .Blog .blogimg1 span {
     font-size: 11px;
   }
 }
-.bggray .blogimg1 span.styledate {
+.Blog .blogimg1 span.styledate {
   margin-left: 15px;
 }
 @media (max-width: 992px) {
-  .bggray .blogimg1 span.styledate {
+  .Blog .blogimg1 span.styledate {
     margin-left: 5px;
   }
 }
-.bggray .blogimg1 p {
+.Blog .blogimg1 p {
   font-size: 16px;
   font-family: "Gudea";
   color: #b1b1b3;
 }
 @media (max-width: 767px) {
-  .bggray .blogimg1 p {
+  .Blog .blogimg1 p {
     font-size: 11px;
   }
 }
-.bggray .blogimg1 p.styletext {
+.Blog .blogimg1 p.styletext {
   margin-top: 5px;
   margin-left: 15px;
   width: 88%;
   padding-bottom: 10px;
 }
 @media (max-width: 992px) {
-  .bggray .blogimg1 p.styletext {
+  .Blog .blogimg1 p.styletext {
     margin-left: 5px;
   }
 }
-.bggray .marglink {
+.Blog .marglink {
   margin-top: 20px;
   margin-bottom: 30px;
 }
-.bggray .marglink a {
+.Blog .marglink a {
   background-color: #be1d2d;
   border-radius: 7px;
   color: #fff;
@@ -358,73 +390,73 @@
   font-weight: bold;
 }
 @media (max-width: 767px) {
-  .bggray .marglink a {
+  .Blog .marglink a {
     margin-left: 25px;
   }
 }
-.bggray .deplacementblock5 {
+.Blog .deplacementblock5 {
   position: relative;
   top: -70px;
 }
 @media (max-width: 992px) {
-  .bggray .deplacementblock5 {
+  .Blog .deplacementblock5 {
     position: relative;
     top: -291px;
     z-index: 1;
   }
 }
 @media (max-width: 767px) {
-  .bggray .deplacementblock5 {
+  .Blog .deplacementblock5 {
     position: relative;
     top: 0px;
     z-index: 1;
   }
 }
 @media (max-width: 992px) {
-  .bggray .deplacementblock6 {
+  .Blog .deplacementblock6 {
     position: relative;
     top: -190px;
     z-index: 1;
   }
 }
 @media (max-width: 767px) {
-  .bggray .deplacementblock6 {
+  .Blog .deplacementblock6 {
     position: relative;
     top: 0px;
     z-index: 1;
   }
 }
-.bggray .deplacementblock7 {
+.Blog .deplacementblock7 {
   position: relative;
   top: -70px;
 }
 @media (max-width: 992px) {
-  .bggray .deplacementblock7 {
+  .Blog .deplacementblock7 {
     position: relative;
     top: 0px;
     z-index: 1;
   }
 }
 @media (max-width: 767px) {
-  .bggray .deplacementblock7 {
+  .Blog .deplacementblock7 {
     position: relative;
     top: 0px;
     z-index: 1;
   }
 }
-.bggray .deplacementblock8 {
+.Blog .deplacementblock8 {
   position: relative;
   top: -45px;
 }
 @media (max-width: 992px) {
-  .bggray .deplacementblock8 {
+  .Blog .deplacementblock8 {
     position: relative;
     top: -185px;
     z-index: 1;
   }
 }
 @media (max-width: 767px) {
-  .bggray .deplacementblock8 {
+  .Blog .deplacementblock8 {
     position: relative;
     top: 5px;
     z-index: 1;
@@ -533,21 +565,21 @@
   font-family: "Gudea";
   font-size: 18px;
 }
-.boulfooter {
+.footer {
   background-image: url(../images/boul.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #241926;
 }
-.boulfooter .bgblack h4 {
+.footer .bgblack h4 {
   font-family: 'nexa_light';
   font-size: 20px;
   color: #fff;
   margin-top: 40px;
   margin-bottom: 30px;
 }
-.boulfooter .bgblack h4::after {
+.footer .bgblack h4::after {
   border-bottom: medium solid #bb272f;
   content: "";
   font-size: 32px;
@@ -557,13 +589,13 @@
   top: 64px;
   width: 20px;
 }
-.boulfooter .bgblack p {
+.footer .bgblack p {
   font-size: 15px;
   font-family: "Gudea";
   color: #54555a;
   margin-bottom: 50px;
 }
-.boulfooter .bgblack ul li.circle {
+.footer .bgblack ul li.circle {
   width: 40px;
   height: 40px;
   background: red;
@@ -575,94 +607,94 @@
   background-color: #19151f;
 }
 @media (max-width: 1199px) {
-  .boulfooter .bgblack ul li.circle {
+  .footer .bgblack ul li.circle {
     margin-left: 5px;
   }
 }
 @media (max-width: 992px) {
-  .boulfooter .bgblack ul li.circle {
+  .footer .bgblack ul li.circle {
     margin-left: 3px;
   }
 }
-.boulfooter .bgblack ul li.circle a i {
+.footer .bgblack ul li.circle a i {
   font-size: 24px;
   margin-left: 8px;
   margin-top: 10px;
   color: #2e2536;
 }
-.boulfooter .bgblack .adress {
+.footer .bgblack .adress {
   margin-bottom: 5px;
 }
-.boulfooter .bgblack .adress i {
+.footer .bgblack .adress i {
   color: #8c8c8e;
   font-size: 24px;
 }
-.boulfooter .bgblack .adress span {
+.footer .bgblack .adress span {
   margin-left: 8px;
 }
-.boulfooter .bgblack .adress span.adresspading {
+.footer .bgblack .adress span.adresspading {
   margin-left: 30px;
   display: block;
 }
-.boulfooter .bgblack .tel {
+.footer .bgblack .tel {
   margin-bottom: 5px;
 }
-.boulfooter .bgblack .tel i {
+.footer .bgblack .tel i {
   color: #8c8c8e;
   font-size: 24px;
 }
-.boulfooter .bgblack .tel span {
+.footer .bgblack .tel span {
   margin-left: 8px;
 }
 @media (max-width: 767px) {
-  .boulfooter .bgblack .email {
+  .footer .bgblack .email {
     margin-bottom: 20px;
   }
 }
-.boulfooter .bgblack .email i {
+.footer .bgblack .email i {
   color: #8c8c8e;
   font-size: 24px;
 }
-.boulfooter .bgblack .email span {
+.footer .bgblack .email span {
   margin-left: 8px;
 }
-.boulfooter .bgtransparanblack {
+.footer .bgtransparanblack {
   background-color: #14111c;
   background-image: url(../images/boul.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.boulfooter .bgtransparanblack ul.footernav {
+.footer .bgtransparanblack ul.footernav {
   margin-top: 25px;
   margin-bottom: 20px;
 }
 @media (max-width: 767px) {
-  .boulfooter .bgtransparanblack ul.footernav {
+  .footer .bgtransparanblack ul.footernav {
     text-align: center;
   }
 }
-.boulfooter .bgtransparanblack ul.footernav li {
+.footer .bgtransparanblack ul.footernav li {
   padding-left: 17px;
 }
 @media (max-width: 1199px) {
-  .boulfooter .bgtransparanblack ul.footernav li {
+  .footer .bgtransparanblack ul.footernav li {
     padding-left: 6px;
   }
 }
 @media (max-width: 992px) {
-  .boulfooter .bgtransparanblack ul.footernav li {
+  .footer .bgtransparanblack ul.footernav li {
     padding-left: 1px;
   }
 }
-.boulfooter .bgtransparanblack ul.footernav li a {
+.footer .bgtransparanblack ul.footernav li a {
   list-style: none;
   text-decoration: none;
   color: #504e52;
   font-size: 15px;
   font-family: "Gudea";
 }
-.boulfooter .bgtransparanblack h5 {
+.footer .bgtransparanblack h5 {
   margin-top: 25px;
   color: #504e52;
   font-size: 15px;
@@ -670,7 +702,7 @@
   margin-bottom: 20px;
 }
 @media (max-width: 767px) {
-  .boulfooter .bgtransparanblack h5 {
+  .footer .bgtransparanblack h5 {
     text-align: center;
   }
 }
