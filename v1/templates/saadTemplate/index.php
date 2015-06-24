@@ -101,7 +101,7 @@ else
 
 <section id="menu">
     <div class="container-fluid">
-        <div class="row dichetnav position0">
+        <div class="row dichetnav menu">
             <div class="col-lg-2 col-md-1 col-sm-1 xs-hidden"></div>
             <div class="col-lg-2  col-md-2 col-sm-3 col-xs-12 navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -114,7 +114,7 @@ else
             </div>
             <div class="col-lg-3 col-md-3 col-sm-2 xs-hidden"></div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 collapse navbar-collapse" id="navbar-collapse">
-                <jdoc:include type="modules" name="position-0" style="none" />
+                <jdoc:include type="modules" name="menu" style="none" />
             </div>
             <div class="col-lg-1 col-md-1 col-sm-1 xs-hidden"></div>
         </div>
@@ -122,7 +122,7 @@ else
 </section>
 <section id="carousel ">
     <div class="container-fluid">
-        <div class="row carousel position1">
+        <div class="row carousel ">
         	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         		<?php if ($this->countModules('position-1')) : ?>
 					<jdoc:include type="modules" name="carousel" style="none" />
@@ -133,19 +133,18 @@ else
 </section> 
 <section id="presentation">
     <div class="container-fluid">
-        <div class="row presentation position2">
+        <div class="row presentation ">
         	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
 	        	<?php if ($this->countModules('position-2')) : ?>
 					<jdoc:include type="modules" name="presentation" style="none" />
 				<?php endif; ?>
-                
             </div>
         </div>
     </div>
 </section>
 <section id="sectionwork">
     <div class="container-fluid">
-    	<div class="row petitboul position3">
+    	<div class="row petitboul sectionwork">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             	<?php if ($this->countModules('position-3')) : ?>
 					<jdoc:include type="modules" name="sectionwork" style="none" />
@@ -156,7 +155,7 @@ else
 </section>
 <section id="portfolio">
     <div class="container-fluid">
-        <div class="row bgportfolio position4">
+        <div class="row bgportfolio portfolio">
         	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         		<?php if ($this->countModules('position-4')) : ?>
 					<jdoc:include type="modules" name="portfolio" style="none" />
@@ -167,7 +166,7 @@ else
 </section> 
 <section id="Blog">
     <div class="container-fluid">
-        <div class="row bggray position5">
+        <div class="row bggray Blog">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             	<?php if ($this->countModules('position-5')) : ?>
 					<jdoc:include type="modules" name="Blog" style="none" />
@@ -178,7 +177,7 @@ else
 </section>
 <footer>
     <div class="container-fluid">
-        <div class="row boulfooter position6">
+        <div class="row boulfooter footer">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             	<?php if ($this->countModules('position-6')) : ?>
 					<jdoc:include type="modules" name="footer" style="none" />
