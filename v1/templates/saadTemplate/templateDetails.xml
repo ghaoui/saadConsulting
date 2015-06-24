@@ -31,12 +31,12 @@
 		<position>language</position>
 		<position>menu</position>
 		<position>breadcrumbs</position>
-		<position>position-0</position>
-		<position>position-1</position>
-		<position>position-2</position>
-		<position>position-3</position>
-		<position>position-4</position>
-		<position>position-5</position>
+		<position>carousel</position>
+		<position>presentation</position>
+		<position>sectionwork</position>
+		<position>portfolio</position>
+		<position>Blog</position>
+		<position>footer</position>
 		<position>position-6</position>
 		<position>position-7</position>
 		<position>position-8</position>

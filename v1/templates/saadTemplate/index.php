@@ -124,7 +124,7 @@ else
     <div class="container-fluid">
         <div class="row carousel ">
         	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        		<?php if ($this->countModules('position-1')) : ?>
+        		<?php if ($this->countModules('carousel')) : ?>
 					<jdoc:include type="modules" name="carousel" style="none" />
 				<?php endif; ?>
         	</div>
@@ -135,7 +135,7 @@ else
     <div class="container-fluid">
         <div class="row presentation ">
         	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
-	        	<?php if ($this->countModules('position-2')) : ?>
+	        	<?php if ($this->countModules('presentation')) : ?>
 					<jdoc:include type="modules" name="presentation" style="none" />
 				<?php endif; ?>
             </div>
@@ -146,7 +146,7 @@ else
     <div class="container-fluid">
     	<div class="row petitboul sectionwork">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            	<?php if ($this->countModules('position-3')) : ?>
+            	<?php if ($this->countModules('sectionwork')) : ?>
 					<jdoc:include type="modules" name="sectionwork" style="none" />
 				<?php endif; ?>
             </div>
@@ -157,7 +157,7 @@ else
     <div class="container-fluid">
         <div class="row bgportfolio portfolio">
         	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        		<?php if ($this->countModules('position-4')) : ?>
+        		<?php if ($this->countModules('portfolio')) : ?>
 					<jdoc:include type="modules" name="portfolio" style="none" />
 				<?php endif; ?>
         	</div>
@@ -168,7 +168,7 @@ else
     <div class="container-fluid">
         <div class="row bggray Blog">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            	<?php if ($this->countModules('position-5')) : ?>
+            	<?php if ($this->countModules('Blog')) : ?>
 					<jdoc:include type="modules" name="Blog" style="none" />
 				<?php endif; ?>
             </div>
@@ -179,7 +179,7 @@ else
     <div class="container-fluid">
         <div class="row boulfooter footer">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            	<?php if ($this->countModules('position-6')) : ?>
+            	<?php if ($this->countModules('footer')) : ?>
 					<jdoc:include type="modules" name="footer" style="none" />
 				<?php endif; ?>
             </div>
