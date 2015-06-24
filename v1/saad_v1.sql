@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.7.1
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 23 Juin 2015 à 15:07
--- Version du serveur :  5.6.20
--- Version de PHP :  5.5.15
+-- Généré le :  Mer 24 Juin 2015 à 11:38
+-- Version du serveur :  5.6.21
+-- Version de PHP :  5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -35,14 +35,14 @@ CREATE TABLE IF NOT EXISTS `mfpg7_assets` (
   `name` varchar(50) NOT NULL COMMENT 'The unique name for the asset.\n',
   `title` varchar(100) NOT NULL COMMENT 'The descriptive title for the asset.',
   `rules` varchar(5120) NOT NULL COMMENT 'JSON encoded access control.'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_assets`
 --
 
 INSERT INTO `mfpg7_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-(1, 0, 0, 117, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(1, 0, 0, 129, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
 (2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 (3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
@@ -59,25 +59,25 @@ INSERT INTO `mfpg7_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (15, 1, 33, 34, 1, 'com_media', 'com_media', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":{"5":1}}'),
 (16, 1, 35, 36, 1, 'com_menus', 'com_menus', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (17, 1, 37, 38, 1, 'com_messages', 'com_messages', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
-(18, 1, 39, 84, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(19, 1, 85, 88, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(20, 1, 89, 90, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
-(21, 1, 91, 92, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
-(22, 1, 93, 94, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(23, 1, 95, 96, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(24, 1, 97, 100, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(26, 1, 101, 102, 1, 'com_wrapper', 'com_wrapper', '{}'),
+(18, 1, 39, 96, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(19, 1, 97, 100, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(20, 1, 101, 102, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
+(21, 1, 103, 104, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
+(22, 1, 105, 106, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(23, 1, 107, 108, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(24, 1, 109, 112, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(26, 1, 113, 114, 1, 'com_wrapper', 'com_wrapper', '{}'),
 (27, 8, 18, 19, 2, 'com_content.category.2', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
 (28, 3, 4, 5, 2, 'com_banners.category.3', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (29, 7, 14, 15, 2, 'com_contact.category.4', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(30, 19, 86, 87, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(32, 24, 98, 99, 1, 'com_users.category.7', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(33, 1, 103, 104, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(34, 1, 105, 106, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
-(35, 1, 107, 108, 1, 'com_tags', 'com_tags', '{"core.admin":[],"core.manage":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
-(36, 1, 109, 110, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
-(37, 1, 111, 112, 1, 'com_ajax', 'com_ajax', '{}'),
-(38, 1, 113, 114, 1, 'com_postinstall', 'com_postinstall', '{}'),
+(30, 19, 98, 99, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(32, 24, 110, 111, 1, 'com_users.category.7', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(33, 1, 115, 116, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(34, 1, 117, 118, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
+(35, 1, 119, 120, 1, 'com_tags', 'com_tags', '{"core.admin":[],"core.manage":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
+(36, 1, 121, 122, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
+(37, 1, 123, 124, 1, 'com_ajax', 'com_ajax', '{}'),
+(38, 1, 125, 126, 1, 'com_postinstall', 'com_postinstall', '{}'),
 (39, 18, 40, 41, 2, 'com_modules.module.1', 'Main Menu', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (40, 18, 42, 43, 2, 'com_modules.module.2', 'Login', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (41, 18, 44, 45, 2, 'com_modules.module.3', 'Popular Articles', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
@@ -93,14 +93,20 @@ INSERT INTO `mfpg7_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (51, 18, 64, 65, 2, 'com_modules.module.17', 'Breadcrumbs', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (52, 18, 66, 67, 2, 'com_modules.module.79', 'Multilanguage status', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (53, 18, 68, 69, 2, 'com_modules.module.86', 'Joomla Version', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(54, 1, 115, 116, 1, 'com_k2', 'COM_K2', '{}'),
+(54, 1, 127, 128, 1, 'com_k2', 'COM_K2', '{}'),
 (55, 18, 70, 71, 2, 'com_modules.module.87', 'K2 Comments', ''),
 (56, 18, 72, 73, 2, 'com_modules.module.88', 'K2 Content', ''),
 (57, 18, 74, 75, 2, 'com_modules.module.89', 'K2 Tools', ''),
 (58, 18, 76, 77, 2, 'com_modules.module.90', 'K2 Users', ''),
 (59, 18, 78, 79, 2, 'com_modules.module.91', 'K2 User', ''),
 (60, 18, 80, 81, 2, 'com_modules.module.92', 'K2 Quick Icons (admin)', ''),
-(61, 18, 82, 83, 2, 'com_modules.module.93', 'K2 Stats (admin)', '');
+(61, 18, 82, 83, 2, 'com_modules.module.93', 'K2 Stats (admin)', ''),
+(62, 18, 84, 85, 2, 'com_modules.module.94', 'carousel', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"module.edit.frontend":[]}'),
+(63, 18, 86, 87, 2, 'com_modules.module.95', 'presentation', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"module.edit.frontend":[]}'),
+(64, 18, 88, 89, 2, 'com_modules.module.96', 'sectionworkdevlopementwebdesigner', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"module.edit.frontend":[]}'),
+(65, 18, 90, 91, 2, 'com_modules.module.97', 'portfolio', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"module.edit.frontend":[]}'),
+(66, 18, 92, 93, 2, 'com_modules.module.98', 'Blog', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"module.edit.frontend":[]}'),
+(67, 18, 94, 95, 2, 'com_modules.module.99', 'footer', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"module.edit.frontend":[]}');
 
 -- --------------------------------------------------------
 
@@ -155,7 +161,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_banners` (
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` int(10) unsigned NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -178,7 +184,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_banner_clients` (
   `purchase_type` tinyint(4) NOT NULL DEFAULT '-1',
   `track_clicks` tinyint(4) NOT NULL DEFAULT '-1',
   `track_impressions` tinyint(4) NOT NULL DEFAULT '-1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -227,7 +233,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_categories` (
   `hits` int(10) unsigned NOT NULL DEFAULT '0',
   `language` char(7) NOT NULL,
   `version` int(10) unsigned NOT NULL DEFAULT '1'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_categories`
@@ -291,7 +297,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_contact_details` (
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `version` int(10) unsigned NOT NULL DEFAULT '1',
   `hits` int(10) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -330,7 +336,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_content` (
   `featured` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Set if article is featured.',
   `language` char(7) NOT NULL COMMENT 'The language code for the article.',
   `xreference` varchar(50) NOT NULL COMMENT 'A reference to enable linkages to external data sets.'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -386,7 +392,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_content_types` (
   `field_mappings` text NOT NULL,
   `router` varchar(255) NOT NULL DEFAULT '',
   `content_history_options` varchar(5120) DEFAULT NULL COMMENT 'JSON string for com_contenthistory options'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10000 ;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_content_types`
@@ -442,7 +448,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_extensions` (
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `ordering` int(11) DEFAULT '0',
   `state` int(11) DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10015 ;
+) ENGINE=InnoDB AUTO_INCREMENT=10017 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_extensions`
@@ -470,7 +476,7 @@ INSERT INTO `mfpg7_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (19, 'com_search', 'component', 'com_search', '', 1, 1, 1, 0, '{"name":"com_search","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_SEARCH_XML_DESCRIPTION","group":"","filename":"search"}', '{"enabled":"0","show_date":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (20, 'com_templates', 'component', 'com_templates', '', 1, 1, 1, 1, '{"name":"com_templates","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_TEMPLATES_XML_DESCRIPTION","group":""}', '{"template_positions_display":"0","upload_limit":"2","image_formats":"gif,bmp,jpg,jpeg,png","source_formats":"txt,less,ini,xml,js,php,css","font_formats":"woff,ttf,otf","compressed_formats":"zip"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (22, 'com_content', 'component', 'com_content', '', 1, 1, 0, 1, '{"name":"com_content","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_CONTENT_XML_DESCRIPTION","group":"","filename":"content"}', '{"article_layout":"_:default","show_title":"1","link_titles":"1","show_intro":"1","show_category":"1","link_category":"1","show_parent_category":"0","link_parent_category":"0","show_author":"1","link_author":"0","show_create_date":"0","show_modify_date":"0","show_publish_date":"1","show_item_navigation":"1","show_vote":"0","show_readmore":"1","show_readmore_title":"1","readmore_limit":"100","show_icons":"1","show_print_icon":"1","show_email_icon":"1","show_hits":"1","show_noauth":"0","show_publishing_options":"1","show_article_options":"1","save_history":"1","history_limit":10,"show_urls_images_frontend":"0","show_urls_images_backend":"1","targeta":0,"targetb":0,"targetc":0,"float_intro":"left","float_fulltext":"left","category_layout":"_:blog","show_category_title":"0","show_description":"0","show_description_image":"0","maxLevel":"1","show_empty_categories":"0","show_no_articles":"1","show_subcat_desc":"1","show_cat_num_articles":"0","show_base_description":"1","maxLevelcat":"-1","show_empty_categories_cat":"0","show_subcat_desc_cat":"1","show_cat_num_articles_cat":"1","num_leading_articles":"1","num_intro_articles":"4","num_columns":"2","num_links":"4","multi_column_order":"0","show_subcategory_content":"0","show_pagination_limit":"1","filter_field":"hide","show_headings":"1","list_show_date":"0","date_format":"","list_show_hits":"1","list_show_author":"1","orderby_pri":"order","orderby_sec":"rdate","order_date":"published","show_pagination":"2","show_pagination_results":"1","show_feed_link":"1","feed_summary":"0"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(23, 'com_config', 'component', 'com_config', '', 1, 1, 0, 1, '{"name":"com_config","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_CONFIG_XML_DESCRIPTION","group":""}', '{"filters":{"1":{"filter_type":"NH","filter_tags":"","filter_attributes":""},"6":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"7":{"filter_type":"NONE","filter_tags":"","filter_attributes":""},"2":{"filter_type":"NH","filter_tags":"","filter_attributes":""},"3":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"4":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"5":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"10":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"12":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"8":{"filter_type":"NONE","filter_tags":"","filter_attributes":""}}}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(23, 'com_config', 'component', 'com_config', '', 1, 1, 0, 1, '{"name":"com_config","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_CONFIG_XML_DESCRIPTION","group":""}', '{"filters":{"1":{"filter_type":"NH","filter_tags":"","filter_attributes":""},"9":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"6":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"7":{"filter_type":"NONE","filter_tags":"","filter_attributes":""},"2":{"filter_type":"NH","filter_tags":"","filter_attributes":""},"3":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"4":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"5":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"8":{"filter_type":"NONE","filter_tags":"","filter_attributes":""}}}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (24, 'com_redirect', 'component', 'com_redirect', '', 1, 1, 0, 1, '{"name":"com_redirect","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_REDIRECT_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (25, 'com_users', 'component', 'com_users', '', 1, 1, 0, 1, '{"name":"com_users","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_USERS_XML_DESCRIPTION","group":"","filename":"users"}', '{"allowUserRegistration":"0","new_usertype":"2","guest_usergroup":"9","sendpassword":"1","useractivation":"1","mail_to_admin":"0","captcha":"","frontend_userparams":"1","site_language":"0","change_login_name":"0","reset_count":"10","reset_time":"1","minimum_length":"4","minimum_integers":"0","minimum_symbols":"0","minimum_uppercase":"0","save_history":"1","history_limit":5,"mailSubjectPrefix":"","mailBodySuffix":""}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (27, 'com_finder', 'component', 'com_finder', '', 1, 1, 0, 0, '{"name":"com_finder","type":"component","creationDate":"August 2011","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_FINDER_XML_DESCRIPTION","group":"","filename":"finder"}', '{"show_description":"1","description_length":255,"allow_empty_query":"0","show_url":"1","show_advanced":"1","expand_advanced":"0","show_date_filters":"0","highlight_terms":"1","opensearch_name":"","opensearch_description":"","batch_size":"50","memory_table_limit":30000,"title_multiplier":"1.7","text_multiplier":"0.7","meta_multiplier":"1.2","path_multiplier":"2.0","misc_multiplier":"0.3","stemmer":"snowball"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -481,7 +487,7 @@ INSERT INTO `mfpg7_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (32, 'com_postinstall', 'component', 'com_postinstall', '', 1, 1, 1, 1, '{"name":"com_postinstall","type":"component","creationDate":"September 2013","author":"Joomla! Project","copyright":"(C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.2.0","description":"COM_POSTINSTALL_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (101, 'SimplePie', 'library', 'simplepie', '', 0, 1, 1, 1, '{"name":"SimplePie","type":"library","creationDate":"2004","author":"SimplePie","copyright":"Copyright (c) 2004-2009, Ryan Parman and Geoffrey Sneddon","authorEmail":"","authorUrl":"http:\\/\\/simplepie.org\\/","version":"1.2","description":"LIB_SIMPLEPIE_XML_DESCRIPTION","group":"","filename":"simplepie"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (102, 'phputf8', 'library', 'phputf8', '', 0, 1, 1, 1, '{"name":"phputf8","type":"library","creationDate":"2006","author":"Harry Fuecks","copyright":"Copyright various authors","authorEmail":"hfuecks@gmail.com","authorUrl":"http:\\/\\/sourceforge.net\\/projects\\/phputf8","version":"0.5","description":"LIB_PHPUTF8_XML_DESCRIPTION","group":"","filename":"phputf8"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(103, 'Joomla! Platform', 'library', 'joomla', '', 0, 1, 1, 1, '{"name":"Joomla! Platform","type":"library","creationDate":"2008","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"http:\\/\\/www.joomla.org","version":"13.1","description":"LIB_JOOMLA_XML_DESCRIPTION","group":"","filename":"joomla"}', '{"mediaversion":"6c47bf00ffbc604095668fe38da348fe"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(103, 'Joomla! Platform', 'library', 'joomla', '', 0, 1, 1, 1, '{"name":"Joomla! Platform","type":"library","creationDate":"2008","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"http:\\/\\/www.joomla.org","version":"13.1","description":"LIB_JOOMLA_XML_DESCRIPTION","group":"","filename":"joomla"}', '{"mediaversion":"0a8107e33d72c03650c9dabd7bbbc519"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (104, 'IDNA Convert', 'library', 'idna_convert', '', 0, 1, 1, 1, '{"name":"IDNA Convert","type":"library","creationDate":"2004","author":"phlyLabs","copyright":"2004-2011 phlyLabs Berlin, http:\\/\\/phlylabs.de","authorEmail":"phlymail@phlylabs.de","authorUrl":"http:\\/\\/phlylabs.de","version":"0.8.0","description":"LIB_IDNA_XML_DESCRIPTION","group":"","filename":"idna_convert"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (105, 'FOF', 'library', 'fof', '', 0, 1, 1, 1, '{"name":"FOF","type":"library","creationDate":"2015-03-11 11:59:00","author":"Nicholas K. Dionysopoulos \\/ Akeeba Ltd","copyright":"(C)2011-2015 Nicholas K. Dionysopoulos","authorEmail":"nicholas@akeebabackup.com","authorUrl":"https:\\/\\/www.akeebabackup.com","version":"2.4.2","description":"LIB_FOF_XML_DESCRIPTION","group":"","filename":"fof"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (106, 'PHPass', 'library', 'phpass', '', 0, 1, 1, 1, '{"name":"PHPass","type":"library","creationDate":"2004-2006","author":"Solar Designer","copyright":"","authorEmail":"solar@openwall.com","authorUrl":"http:\\/\\/www.openwall.com\\/phpass\\/","version":"0.3","description":"LIB_PHPASS_XML_DESCRIPTION","group":"","filename":"phpass"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -596,7 +602,8 @@ INSERT INTO `mfpg7_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (10011, 'K2 Users', 'module', 'mod_k2_users', '', 0, 1, 0, 0, '{"name":"K2 Users","type":"module","creationDate":"December 8th, 2014","author":"JoomlaWorks","copyright":"Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.","authorEmail":"please-use-the-contact-form@joomlaworks.net","authorUrl":"www.joomlaworks.net","version":"2.6.9","description":"K2_MOD_K2_USERS_DESCRTIPTION","group":"","filename":"mod_k2_users.j25"}', '{"moduleclass_sfx":"","getTemplate":"Default","source":"0","":"K2_DISPLAY_OPTIONS","filter":"1","K2UserGroup":"","ordering":"1","limit":"4","userIDs":"","userName":"1","userAvatar":"1","userAvatarWidthSelect":"custom","userAvatarWidth":"50","userDescription":"1","userDescriptionWordLimit":"","userURL":"1","userEmail":"0","userFeed":"1","userItemCount":"1","cache":"1","cache_time":"900"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10012, 'K2 User', 'module', 'mod_k2_user', '', 0, 1, 0, 0, '{"name":"K2 User","type":"module","creationDate":"December 8th, 2014","author":"JoomlaWorks","copyright":"Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.","authorEmail":"please-use-the-contact-form@joomlaworks.net","authorUrl":"www.joomlaworks.net","version":"2.6.9","description":"K2_MOD_K2_USER_DESCRIPTION","group":"","filename":"mod_k2_user.j25"}', '{"moduleclass_sfx":"","pretext":"","":"K2_LOGIN_LOGOUT_REDIRECTION","name":"1","userAvatar":"1","userAvatarWidthSelect":"custom","userAvatarWidth":"50","menu":"","login":"","logout":"","usesecure":"0","cache":"0","cache_time":"900"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10013, 'K2 Quick Icons (admin)', 'module', 'mod_k2_quickicons', '', 1, 1, 2, 0, '{"name":"K2 Quick Icons (admin)","type":"module","creationDate":"December 8th, 2014","author":"JoomlaWorks","copyright":"Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.","authorEmail":"please-use-the-contact-form@joomlaworks.net","authorUrl":"www.joomlaworks.net","version":"2.6.9","description":"K2_QUICKICONS_FOR_USE_IN_THE_JOOMLA_CONTROL_PANEL_DASHBOARD_PAGE","group":"","filename":"mod_k2_quickicons.j25"}', '{"modCSSStyling":"1","modLogo":"1","cache":"0","cache_time":"900"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10014, 'K2 Stats (admin)', 'module', 'mod_k2_stats', '', 1, 1, 2, 0, '{"name":"K2 Stats (admin)","type":"module","creationDate":"December 8th, 2014","author":"JoomlaWorks","copyright":"Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.","authorEmail":"please-use-the-contact-form@joomlaworks.net","authorUrl":"www.joomlaworks.net","version":"2.6.9","description":"K2_STATS_FOR_USE_IN_THE_K2_DASHBOARD_PAGE","group":"","filename":"mod_k2_stats.j25"}', '{"latestItems":"1","popularItems":"1","mostCommentedItems":"1","latestComments":"1","statistics":"1","cache":"0","cache_time":"900"}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+(10014, 'K2 Stats (admin)', 'module', 'mod_k2_stats', '', 1, 1, 2, 0, '{"name":"K2 Stats (admin)","type":"module","creationDate":"December 8th, 2014","author":"JoomlaWorks","copyright":"Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.","authorEmail":"please-use-the-contact-form@joomlaworks.net","authorUrl":"www.joomlaworks.net","version":"2.6.9","description":"K2_STATS_FOR_USE_IN_THE_K2_DASHBOARD_PAGE","group":"","filename":"mod_k2_stats.j25"}', '{"latestItems":"1","popularItems":"1","mostCommentedItems":"1","latestComments":"1","statistics":"1","cache":"0","cache_time":"900"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10016, 'saadTemplate', 'template', 'saadTemplate', '', 0, 1, 1, 0, '{"name":"saadTemplate","type":"template","creationDate":"25\\/12\\/2014","author":"Unknown","copyright":"Copyright (C) 2014 Open Source Matters, Inc. All rights reserved.","authorEmail":"","authorUrl":"","version":"1.0","description":"","group":"","filename":"templateDetails"}', '{"templateColor":"#08C","templateBackgroundColor":"#F4F6F7","logoFile":"","sitetitle":"","sitedescription":"","googleFont":"1","googleFontName":"Open+Sans","fluidContainer":"0","mainbody":"0"}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -619,7 +626,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_finder_filters` (
   `map_count` int(10) unsigned NOT NULL DEFAULT '0',
   `data` text NOT NULL,
   `params` mediumtext
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -647,7 +654,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_finder_links` (
   `sale_price` double unsigned NOT NULL DEFAULT '0',
   `type_id` int(11) NOT NULL,
   `object` mediumblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -854,7 +861,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_finder_taxonomy` (
   `state` tinyint(1) unsigned NOT NULL DEFAULT '1',
   `access` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `ordering` tinyint(1) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_finder_taxonomy`
@@ -890,7 +897,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_finder_terms` (
   `soundex` varchar(75) NOT NULL,
   `links` int(10) NOT NULL DEFAULT '0',
   `language` char(3) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1070,7 +1077,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_finder_types` (
 `id` int(10) unsigned NOT NULL,
   `title` varchar(100) NOT NULL,
   `mime` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1085,7 +1092,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_k2_attachments` (
   `title` varchar(255) NOT NULL,
   `titleAttribute` text NOT NULL,
   `hits` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1108,7 +1115,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_k2_categories` (
   `trash` smallint(6) NOT NULL DEFAULT '0',
   `plugins` text NOT NULL,
   `language` char(7) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1126,7 +1133,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_k2_comments` (
   `commentEmail` varchar(255) NOT NULL,
   `commentURL` varchar(255) NOT NULL,
   `published` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1142,7 +1149,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_k2_extra_fields` (
   `group` int(11) NOT NULL,
   `published` tinyint(4) NOT NULL,
   `ordering` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1153,7 +1160,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_k2_extra_fields` (
 CREATE TABLE IF NOT EXISTS `mfpg7_k2_extra_fields_groups` (
 `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1198,7 +1205,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_k2_items` (
   `metakey` text NOT NULL,
   `plugins` text NOT NULL,
   `language` char(7) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1223,7 +1230,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_k2_tags` (
 `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `published` smallint(6) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1235,7 +1242,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_k2_tags_xref` (
 `id` int(11) NOT NULL,
   `tagID` int(11) NOT NULL,
   `itemID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1256,7 +1263,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_k2_users` (
   `ip` varchar(15) NOT NULL,
   `hostname` varchar(255) NOT NULL,
   `notes` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1268,7 +1275,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_k2_user_groups` (
 `id` int(10) unsigned NOT NULL,
   `name` varchar(255) NOT NULL,
   `permissions` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1290,7 +1297,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_languages` (
   `published` int(11) NOT NULL DEFAULT '0',
   `access` int(10) unsigned NOT NULL DEFAULT '0',
   `ordering` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_languages`
@@ -1330,7 +1337,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_menu` (
   `home` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Indicates if this menu item is the home or default page.',
   `language` char(7) NOT NULL DEFAULT '',
   `client_id` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=113 ;
+) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_menu`
@@ -1382,7 +1389,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_menu_types` (
   `menutype` varchar(24) NOT NULL,
   `title` varchar(48) NOT NULL,
   `description` varchar(255) NOT NULL DEFAULT ''
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_menu_types`
@@ -1407,7 +1414,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_messages` (
   `priority` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `subject` varchar(255) NOT NULL DEFAULT '',
   `message` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1446,14 +1453,14 @@ CREATE TABLE IF NOT EXISTS `mfpg7_modules` (
   `params` text NOT NULL,
   `client_id` tinyint(4) NOT NULL DEFAULT '0',
   `language` char(7) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=94 ;
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_modules`
 --
 
 INSERT INTO `mfpg7_modules` (`id`, `asset_id`, `title`, `note`, `content`, `ordering`, `position`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `published`, `module`, `access`, `showtitle`, `params`, `client_id`, `language`) VALUES
-(1, 39, 'Main Menu', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 1, '{"menutype":"mainmenu","startLevel":"0","endLevel":"0","showAllChildren":"0","tag_id":"","class_sfx":"","window_open":"","layout":"","moduleclass_sfx":"_menu","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, '*'),
+(1, 39, 'Main Menu', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_menu', 1, 1, '{"menutype":"mainmenu","startLevel":"0","endLevel":"0","showAllChildren":"0","tag_id":"","class_sfx":"","window_open":"","layout":"","moduleclass_sfx":"_menu","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, '*'),
 (2, 40, 'Login', '', '', 1, 'login', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_login', 1, 1, '', 1, '*'),
 (3, 41, 'Popular Articles', '', '', 3, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_popular', 3, 1, '{"count":"5","catid":"","user_id":"0","layout":"_:default","moduleclass_sfx":"","cache":"0","automatic_title":"1"}', 1, '*'),
 (4, 42, 'Recently Added Articles', '', '', 4, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_latest', 3, 1, '{"count":"5","ordering":"c_dsc","catid":"","user_id":"0","layout":"_:default","moduleclass_sfx":"","cache":"0","automatic_title":"1"}', 1, '*'),
@@ -1464,8 +1471,8 @@ INSERT INTO `mfpg7_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 (13, 47, 'Admin Submenu', '', '', 1, 'submenu', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_submenu', 3, 1, '', 1, '*'),
 (14, 48, 'User Status', '', '', 2, 'status', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_status', 3, 1, '', 1, '*'),
 (15, 49, 'Title', '', '', 1, 'title', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_title', 3, 1, '', 1, '*'),
-(16, 50, 'Login Form', '', '', 7, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_login', 1, 1, '{"greeting":"1","name":"0"}', 0, '*'),
-(17, 51, 'Breadcrumbs', '', '', 1, 'position-2', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_breadcrumbs', 1, 1, '{"moduleclass_sfx":"","showHome":"1","homeText":"","showComponent":"1","separator":"","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, '*'),
+(16, 50, 'Login Form', '', '', 7, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_login', 1, 1, '{"greeting":"1","name":"0"}', 0, '*'),
+(17, 51, 'Breadcrumbs', '', '', 1, 'position-2', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_breadcrumbs', 1, 1, '{"moduleclass_sfx":"","showHome":"1","homeText":"","showComponent":"1","separator":"","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, '*'),
 (79, 52, 'Multilanguage status', '', '', 1, 'status', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_multilangstatus', 3, 1, '{"layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
 (86, 53, 'Joomla Version', '', '', 1, 'footer', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_version', 3, 1, '{"format":"short","product":"1","layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
 (87, 55, 'K2 Comments', '', '', 0, '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_k2_comments', 1, 1, '', 0, '*'),
@@ -1474,7 +1481,13 @@ INSERT INTO `mfpg7_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 (90, 58, 'K2 Users', '', '', 0, '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_k2_users', 1, 1, '', 0, '*'),
 (91, 59, 'K2 User', '', '', 0, '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_k2_user', 1, 1, '', 0, '*'),
 (92, 60, 'K2 Quick Icons (admin)', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_k2_quickicons', 1, 1, '', 1, '*'),
-(93, 61, 'K2 Stats (admin)', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_k2_stats', 1, 1, '', 1, '*');
+(93, 61, 'K2 Stats (admin)', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_k2_stats', 1, 1, '', 1, '*'),
+(94, 62, 'carousel', '', '<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">\r\n<div class="carousel-inner">\r\n<div class="item active"><img class="img-responsive" src="images/carousolimg.jpg" alt="..." />\r\n<div class="carousel-caption">\r\n<h3>Votre slogan</h3>\r\n<h2>sera place ici</h2>\r\n<a>contactez nous</a></div>\r\n</div>\r\n</div>\r\n</div>', 1, 'carousel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(95, 63, 'presentation', '', '<div class="row">\r\n<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center ">\r\n<h5>Postremo ad id</h5>\r\n<h3>indignitatis est ventum</h3>\r\n<p>ut cum peregrini ob formidatam haut ita dudum alimentorum inopiam pellerentur ab urbe praecipites, sectatoribus disciplinarum</p>\r\n<p>liberalium inpendio paucis sine respiratione ulla extrusis, tenerentur minimarum adseclae veri.</p>\r\n</div>\r\n</div>', 1, 'presentation', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(96, 64, 'sectionworkdevlopementwebdesigner', '', '<div class="row">\r\n<div class="col-lg-2  hidden-md hidden-sm hidden-xs"> </div>\r\n<div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 text-center"><img class="img-responsive center-block boderraduis" src="images/mod4pic4.png" alt="" />\r\n<h3>Web design</h3>\r\n<div class="borderbottom center-block"> </div>\r\n<p>Tempus, et tria milia saltatricum ne interpellata quidem cum ch</p>\r\n</div>\r\n<div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 text-center"><img class="img-responsive center-block boderraduis" src="images/mod4pic3.png" alt="" />\r\n<h3>Webmarketing</h3>\r\n<p>Saltatricum ne interpellata quidem cum choris totidemque remane remane magistris</p>\r\n</div>\r\n<div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 text-center"><img class="img-responsive center-block boderraduis" src="images/mod4pic2.png" alt="" />\r\n<h3>Développement</h3>\r\n<p>Alimentorum inopiam pellerentur ab urbe praecipites</p>\r\n</div>\r\n<div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 text-center"><img class="img-responsive center-block boderraduis" src="images/mod4pic1.png" alt="" />\r\n<h3>Sous-traitance</h3>\r\n<p>Dudum alimentorum inopiam pellerentur ab urbe praecipites, sectatoribus</p>\r\n</div>\r\n<div class="col-lg-2 hidden-md col-sm-12 col-xs-12 "> </div>\r\n</div>', 1, 'sectionwork', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(97, 65, 'portfolio', '', '<div class="row">\r\n<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center ">\r\n<h3>Portfolio</h3>\r\n<p>ut cum peregrini ob formidatam haut ita dudum alimentorum inopiam pellerentur ab urbe praecipites, sectatoribus disciplinarum</p>\r\n<p>liberalium inpendio paucis sine respiratione ulla extrusis, tenerentur minimarum adseclae veri.</p>\r\n<div id="demo" class="jcImgScroll">\r\n<ul>\r\n<li><a href="#"> <img class="img-responsive" src="images/portfolimg1.png" alt="" /> </a>\r\n<h5 class="text-left">Logo</h5>\r\n<p class="text-left">ILLUSION STUDIO</p>\r\n</li>\r\n<li><a href="#"> <img class="img-responsive" src="images/portfolimg2.png" alt="" /> </a>\r\n<h5 class="text-left">Site web</h5>\r\n<p class="text-left">CZYM JET</p>\r\n</li>\r\n<li><a href="#"> <img class="img-responsive" src="images/portfolimg1.png" alt="" /> </a></li>\r\n<li><a href="#"> <img class="img-responsive" src="images/portfolimg3.png" alt="" /> </a>\r\n<h5 class="text-left">Logo</h5>\r\n<p class="text-left">SOYAL</p>\r\n</li>\r\n<li><a href="#"> <img class="img-responsive" src="images/portfolimg4.png" alt="" /> </a>\r\n<h5 class="text-left">Site web</h5>\r\n<p class="text-left">RALENTLESS</p>\r\n</li>\r\n</ul>\r\n</div>\r\n</div>\r\n</div>', 1, 'portfolio', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(98, 66, 'Blog', '', '<div class="row">\r\n<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">\r\n<h3>BLOG</h3>\r\n</div>\r\n</div>\r\n<div class="row">\r\n<div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"> </div>\r\n<div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">\r\n<div class="blogimg1 center-block"><img class="img-responsive" src="images/img_blog1.png" alt="" /> <span class="styledate">14.05.15 </span>\r\n<p class="styletext">Alimentorum inopiam pellerentur formidatam haut</p>\r\n</div>\r\n</div>\r\n<div class="hidden-lg hidden-md hidden-sm col-xs-2"> </div>\r\n<div class="hidden-lg hidden-md hidden-sm col-xs-4"> </div>\r\n<div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">\r\n<div class="blogimg1 center-block"><img class="img-responsive" src="images/img_blog2.png" alt="" /> <span class="styledate">14.05.15 </span>\r\n<p class="styletext">formidatam haut ita dudum alimentorum inopiam pelleren inopiam pellerentur formidatam haut</p>\r\n</div>\r\n</div>\r\n<div class="hidden-lg hidden-md hidden-sm col-xs-2"> </div>\r\n<div class="hidden-lg hidden-md hidden-sm col-xs-4"> </div>\r\n<div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">\r\n<div class="blogimg1 center-block"><img class="img-responsive" src="images/img_blog3.png" alt="" /> <span class="styledate">14.05.15 </span>\r\n<p class="styletext">Alimentorum inopiam pellerentur formidatam haut</p>\r\n</div>\r\n</div>\r\n<div class="hidden-lg hidden-md hidden-sm col-xs-2"> </div>\r\n<div class="hidden-lg hidden-md hidden-sm col-xs-4"> </div>\r\n<div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">\r\n<div class="blogimg1 center-block"><img class="img-responsive" src="images/img_blog4.png" alt="" /> <span class="styledate">14.05.15 </span>\r\n<p class="styletext">Alimentorum inopiam pellerentur formidatam haut</p>\r\n</div>\r\n</div>\r\n<div class="col-lg-2 col-md-2 col-sm-2 hidden-xs"> </div>\r\n</div>\r\n<div class="row">\r\n<div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"> </div>\r\n<div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">\r\n<div class="blogimg1 deplacementblock5 center-block"><img class="img-responsive" src="images/img_blog5.png" alt="" /> <span class="styledate">14.05.15 </span>\r\n<p class="styletext">Alimentorum inopiam pellerentur formidatam haut</p>\r\n</div>\r\n</div>\r\n<div class="hidden-lg hidden-md hidden-sm col-xs-2"> </div>\r\n<div class="hidden-lg hidden-md hidden-sm col-xs-4"> </div>\r\n<div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">\r\n<div class="blogimg1 deplacementblock6 center-block"><img class="img-responsive" src="images/img_blog6.png" alt="" /> <span class="styledate">14.05.15 </span>\r\n<p class="styletext">formidatam haut ita dudum alimentorum inopiam pelleren inopiam pellerentur formidatam haut</p>\r\n</div>\r\n</div>\r\n<div class="hidden-lg hidden-md col-sm-3 col-xs-2"> </div>\r\n<div class="hidden-lg hidden-md hidden-sm col-xs-4"> </div>\r\n<div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">\r\n<div class="blogimg1 deplacementblock7 center-block"><img class="img-responsive" src="images/img_blog7.png" alt="" /> <span class="styledate">14.05.15 </span>\r\n<p class="styletext">formidatam haut ita dudum alimentorum inopiam pelleren inopiam pellerentur formidatam haut</p>\r\n</div>\r\n</div>\r\n<div class="hidden-lg hidden-md col-sm-5 col-xs-2"> </div>\r\n<div class="hidden-lg hidden-md hidden-sm col-xs-4"> </div>\r\n<div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">\r\n<div class="blogimg1 deplacementblock8 center-block"><img class="img-responsive" src="images/img_blog8.jpg" alt="" /> <span class="styledate"> 14.05.15 </span>\r\n<p class="styletext">Alimentorum inopiam pellerentur formidatam haut</p>\r\n</div>\r\n</div>\r\n<div class="col-lg-2 col-md-2 col-sm-2 hidden-xs"> </div>\r\n</div>\r\n<div class="row">\r\n<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center marglink"><a>VOIR PLUS</a></div>\r\n</div>', 1, 'Blog', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(99, 67, 'footer', '', '<div class="row bgblack">\r\n<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"> </div>\r\n<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">\r\n<div class="row ">\r\n<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">\r\n<h4>SAAD</h4>\r\n<p>Tempus, et tria milia saltatricum ne interpellata quidem cum choris formidatam haut ita dudum alimentorum inopiam pellerentur ab urbe praecipites.</p>\r\n</div>\r\n<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">\r\n<h4>Rejoignez-nous</h4>\r\n</div>\r\n<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">\r\n<h4>Coordonnées</h4>\r\n<div class="adress">Tempus, et tria milia saltatricum <span class="adresspading">quidem cum choris.</span></div>\r\n<div class="tel">Tél : (+216) 00 00 00</div>\r\n<div class="email">Email : info@saad.com.tn</div>\r\n</div>\r\n</div>\r\n</div>\r\n<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"> </div>\r\n</div>\r\n<div class="row bgtransparanblack">\r\n<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"> </div>\r\n<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">\r\n<div class="row ">\r\n<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">\r\n<h5>© Copyright 2015</h5>\r\n</div>\r\n<div class="col-lg-3 col-md-3 col-sm-1 xs-hidden"> </div>\r\n<div class="col-lg-6 col-md-6 col-sm-7 col-xs-12">\r\n<ul class="list-inline footernav  navbar-right">\r\n<li><a>A propos</a></li>\r\n<li><a>Activités</a></li>\r\n<li><a>Portfolio</a></li>\r\n<li><a> Blog</a></li>\r\n<li><a> Contact</a></li>\r\n</ul>\r\n</div>\r\n</div>\r\n</div>\r\n<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"> </div>\r\n</div>', 1, 'footer', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*');
 
 -- --------------------------------------------------------
 
@@ -1510,7 +1523,13 @@ INSERT INTO `mfpg7_modules_menu` (`moduleid`, `menuid`) VALUES
 (79, 0),
 (86, 0),
 (92, 0),
-(93, 0);
+(93, 0),
+(94, 0),
+(95, 0),
+(96, 0),
+(97, 0),
+(98, 0),
+(99, 0);
 
 -- --------------------------------------------------------
 
@@ -1549,7 +1568,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_newsfeeds` (
   `version` int(10) unsigned NOT NULL DEFAULT '1',
   `hits` int(10) unsigned NOT NULL DEFAULT '0',
   `images` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1562,7 +1581,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_overrider` (
   `constant` varchar(255) NOT NULL,
   `string` text NOT NULL,
   `file` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1585,7 +1604,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_postinstall_messages` (
   `condition_method` varchar(255) DEFAULT NULL COMMENT 'Display condition method, must return boolean',
   `version_introduced` varchar(50) NOT NULL DEFAULT '3.2.0' COMMENT 'Version when this message was introduced',
   `enabled` tinyint(3) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_postinstall_messages`
@@ -1612,7 +1631,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_redirect_links` (
   `created_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `header` smallint(3) NOT NULL DEFAULT '301'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1653,9 +1672,8 @@ CREATE TABLE IF NOT EXISTS `mfpg7_session` (
 --
 
 INSERT INTO `mfpg7_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-('010t0r20gmmvlkduu4himfm357', 1, 0, '1435064604', '__default|a:8:{s:15:"session.counter";i:17;s:19:"session.timer.start";i:1435064313;s:18:"session.timer.last";i:1435064574;s:17:"session.timer.now";i:1435064604;s:22:"session.client.browser";s:109:"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":5:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:5:"en-GB";}s:13:"com_installer";O:8:"stdClass":3:{s:7:"message";s:0:"";s:17:"extension_message";s:0:"";s:12:"redirect_url";N;}s:9:"com_users";O:8:"stdClass":1:{s:4:"edit";O:8:"stdClass":1:{s:4:"user";O:8:"stdClass":1:{s:4:"data";N;}}}s:11:"com_plugins";O:8:"stdClass":1:{s:7:"plugins";O:8:"stdClass":4:{s:6:"filter";O:8:"stdClass":4:{s:6:"search";s:4:"less";s:6:"access";i:0;s:7:"enabled";s:0:"";s:6:"folder";s:0:"";}s:8:"ordercol";s:6:"folder";s:9:"orderdirn";s:3:"asc";s:10:"limitstart";i:0;}}s:6:"global";O:8:"stdClass":1:{s:4:"list";O:8:"stdClass":1:{s:5:"limit";i:20;}}}s:9:"separator";s:1:".";}s:4:"user";O:5:"JUser":28:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:3:"369";s:4:"name";s:10:"Super User";s:8:"username";s:4:"saad";s:5:"email";s:21:"saad.com.tn@gmail.com";s:8:"password";s:60:"$2y$10$mAjY/X9P2J6CH6GuqVPf7eR2yANFWUm9U7cAlwKDElWA/wmgOnIAq";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2015-06-23 12:57:59";s:13:"lastvisitDate";s:19:"0000-00-00 00:00:00";s:10:"activation";s:1:"0";s:6:"params";s:0:"";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:12:"requireReset";s:1:"0";s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}s:9:"separator";s:1:".";}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:13:"\\0\\0\\0userHelper";O:18:"JUserWrapperHelper":0:{}s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"3f5d92ba7aeef984b9f69b89020e56a2";}', 369, 'saad'),
-('i72e4u7cfc0n9b5e5lsunut5i7', 1, 1, '1435064290', '__default|a:8:{s:15:"session.counter";i:1;s:19:"session.timer.start";i:1435064289;s:18:"session.timer.last";i:1435064289;s:17:"session.timer.now";i:1435064289;s:22:"session.client.browser";s:72:"Mozilla/5.0 (Windows NT 6.2; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0";s:8:"registry";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}s:9:"separator";s:1:".";}s:4:"user";O:5:"JUser":26:{s:9:"\\0\\0\\0isRoot";N;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:1:"9";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:12:"requireReset";N;s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}s:9:"separator";s:1:".";}s:14:"\\0\\0\\0_authGroups";N;s:14:"\\0\\0\\0_authLevels";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:13:"\\0\\0\\0userHelper";O:18:"JUserWrapperHelper":0:{}s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"d945c043efbb7fcd41018764cea49c2c";}', 0, ''),
-('oa2uadfibgiau1gkm335vivva1', 0, 1, '1435064495', '__default|a:8:{s:15:"session.counter";i:2;s:19:"session.timer.start";i:1435064294;s:18:"session.timer.last";i:1435064294;s:17:"session.timer.now";i:1435064494;s:22:"session.client.browser";s:72:"Mozilla/5.0 (Windows NT 6.2; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0";s:8:"registry";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}s:9:"separator";s:1:".";}s:4:"user";O:5:"JUser":26:{s:9:"\\0\\0\\0isRoot";b:0;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:1:"9";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:12:"requireReset";N;s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}s:9:"separator";s:1:".";}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:9;}s:14:"\\0\\0\\0_authLevels";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:13:"\\0\\0\\0userHelper";O:18:"JUserWrapperHelper":0:{}s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"573046ece0462c0512f6e7b105c2c858";}', 0, '');
+('10qlfperre6o3r3v06kkpulvt0', 1, 0, '1435138413', '__default|a:8:{s:15:"session.counter";i:59;s:19:"session.timer.start";i:1435137670;s:18:"session.timer.last";i:1435138411;s:17:"session.timer.now";i:1435138412;s:22:"session.client.browser";s:72:"Mozilla/5.0 (Windows NT 6.2; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0";s:8:"registry";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":2:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:5:"en-GB";}s:11:"com_modules";O:8:"stdClass":3:{s:4:"edit";O:8:"stdClass":1:{s:6:"module";O:8:"stdClass":2:{s:4:"data";N;s:2:"id";a:0:{}}}s:3:"add";O:8:"stdClass":1:{s:6:"module";O:8:"stdClass":2:{s:12:"extension_id";N;s:6:"params";N;}}s:7:"modules";O:8:"stdClass":1:{s:6:"filter";O:8:"stdClass":1:{s:18:"client_id_previous";i:0;}}}}s:9:"separator";s:1:".";}s:4:"user";O:5:"JUser":28:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:3:"370";s:4:"name";s:7:"jobrane";s:8:"username";s:7:"jobrane";s:5:"email";s:17:"jobrane@gmail.com";s:8:"password";s:60:"$2y$10$jdKvj8rWApfoaD0UvdSbU.Dx16/qi7LLg.OVHfTqWzM9JCP.b/giK";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"0";s:12:"registerDate";s:19:"2015-06-23 12:59:44";s:13:"lastvisitDate";s:19:"2015-06-24 06:57:07";s:10:"activation";s:0:"";s:6:"params";s:92:"{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}";s:6:"groups";a:2:{i:2;s:1:"2";i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:12:"requireReset";s:1:"0";s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":6:{s:11:"admin_style";s:0:"";s:14:"admin_language";s:0:"";s:8:"language";s:0:"";s:6:"editor";s:0:"";s:8:"helpsite";s:0:"";s:8:"timezone";s:0:"";}s:9:"separator";s:1:".";}s:14:"\\0\\0\\0_authGroups";a:3:{i:0;i:1;i:1;i:2;i:3;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:13:"\\0\\0\\0userHelper";O:18:"JUserWrapperHelper":0:{}s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"90bea713709dec140b81cffb06812be6";}', 370, 'jobrane'),
+('3qi7mu6sg1teigu77rddntmej6', 0, 1, '1435138416', '__default|a:7:{s:15:"session.counter";i:1;s:19:"session.timer.start";i:1435138415;s:18:"session.timer.last";i:1435138415;s:17:"session.timer.now";i:1435138415;s:22:"session.client.browser";s:72:"Mozilla/5.0 (Windows NT 6.2; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0";s:8:"registry";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}s:9:"separator";s:1:".";}s:4:"user";O:5:"JUser":26:{s:9:"\\0\\0\\0isRoot";b:0;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:1:"9";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:12:"requireReset";N;s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":2:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}s:9:"separator";s:1:".";}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:9;}s:14:"\\0\\0\\0_authLevels";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:13:"\\0\\0\\0userHelper";O:18:"JUserWrapperHelper":0:{}s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}}', 0, '');
 
 -- --------------------------------------------------------
 
@@ -1694,7 +1712,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_tags` (
   `version` int(10) unsigned NOT NULL DEFAULT '1',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_tags`
@@ -1716,7 +1734,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_template_styles` (
   `home` char(7) NOT NULL DEFAULT '0',
   `title` varchar(255) NOT NULL DEFAULT '',
   `params` text NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_template_styles`
@@ -1725,8 +1743,9 @@ CREATE TABLE IF NOT EXISTS `mfpg7_template_styles` (
 INSERT INTO `mfpg7_template_styles` (`id`, `template`, `client_id`, `home`, `title`, `params`) VALUES
 (4, 'beez3', 0, '0', 'Beez3 - Default', '{"wrapperSmall":"53","wrapperLarge":"72","logo":"images\\/joomla_black.gif","sitetitle":"Joomla!","sitedescription":"Open Source Content Management","navposition":"left","templatecolor":"personal","html5":"0"}'),
 (5, 'hathor', 1, '0', 'Hathor - Default', '{"showSiteName":"0","colourChoice":"","boldText":"0"}'),
-(7, 'protostar', 0, '1', 'protostar - Default', '{"templateColor":"","logoFile":"","googleFont":"1","googleFontName":"Open+Sans","fluidContainer":"0"}'),
-(8, 'isis', 1, '1', 'isis - Default', '{"templateColor":"","logoFile":""}');
+(7, 'protostar', 0, '0', 'protostar - Default', '{"templateColor":"","logoFile":"","googleFont":"1","googleFontName":"Open+Sans","fluidContainer":"0"}'),
+(8, 'isis', 1, '1', 'isis - Default', '{"templateColor":"","logoFile":""}'),
+(9, 'saadTemplate', 0, '1', 'saadTemplate - Default', '{"templateColor":"#08C","templateBackgroundColor":"#F4F6F7","logoFile":"","sitetitle":"","sitedescription":"","googleFont":"1","googleFontName":"Open+Sans","fluidContainer":"0","mainbody":"0"}');
 
 -- --------------------------------------------------------
 
@@ -1780,7 +1799,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_ucm_content` (
   `core_catid` int(10) unsigned NOT NULL DEFAULT '0',
   `core_xreference` varchar(50) NOT NULL COMMENT 'A reference to enable linkages to external data sets.',
   `core_type_id` int(10) unsigned DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Contains core content data in name spaced fields' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Contains core content data in name spaced fields';
 
 -- --------------------------------------------------------
 
@@ -1799,7 +1818,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_ucm_history` (
   `sha1_hash` varchar(50) NOT NULL DEFAULT '' COMMENT 'SHA1 hash of the version_data column.',
   `version_data` mediumtext NOT NULL COMMENT 'json-encoded string of version data',
   `keep_forever` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0=auto delete; 1=keep'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1822,7 +1841,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_updates` (
   `detailsurl` text NOT NULL,
   `infourl` text NOT NULL,
   `extra_query` varchar(1000) DEFAULT ''
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Available Updates' AUTO_INCREMENT=61 ;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8 COMMENT='Available Updates';
 
 --
 -- Contenu de la table `mfpg7_updates`
@@ -1888,7 +1907,8 @@ INSERT INTO `mfpg7_updates` (`update_id`, `update_site_id`, `extension_id`, `nam
 (57, 3, 0, 'FrenchCA', '', 'pkg_fr-CA', 'package', '', 0, '3.3.6.1', '', 'http://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
 (58, 3, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.3.0.1', '', 'http://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
 (59, 3, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.1', '', 'http://update.joomla.org/language/details3/si-LK_details.xml', '', ''),
-(60, 3, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.1.2', '', 'http://update.joomla.org/language/details3/prs-AF_details.xml', '', '');
+(60, 3, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.1.2', '', 'http://update.joomla.org/language/details3/prs-AF_details.xml', '', ''),
+(61, 5, 10000, 'System - Less Compiler', 'A Joomla! System Plugin, compiles templates .less files on page load only if they changed. Implemented with lessphp', 'less', 'plugin', 'system', 0, '0.8.0', '', 'http://www.attec.at/joomla-updates/plg_system_less_update.xml', 'https://github.com/ndeet/plg_system_less', '');
 
 -- --------------------------------------------------------
 
@@ -1904,19 +1924,19 @@ CREATE TABLE IF NOT EXISTS `mfpg7_update_sites` (
   `enabled` int(11) DEFAULT '0',
   `last_check_timestamp` bigint(20) DEFAULT '0',
   `extra_query` varchar(1000) DEFAULT ''
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Update Sites' AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Update Sites';
 
 --
 -- Contenu de la table `mfpg7_update_sites`
 --
 
 INSERT INTO `mfpg7_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-(1, 'Joomla! Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1435064326, ''),
-(2, 'Joomla! Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1435064327, ''),
-(3, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 1435064326, ''),
-(4, 'Joomla! Update Component Update Site', 'extension', 'http://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1435064326, ''),
-(5, 'at[tec] Update Server', 'extension', 'http://www.attec.at/joomla-updates/plg_system_less_update.xml', 1, 0, ''),
-(6, 'K2 Updates', 'extension', 'http://getk2.org/update.xml', 1, 0, '');
+(1, 'Joomla! Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1435130283, ''),
+(2, 'Joomla! Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1435130283, ''),
+(3, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 1435130283, ''),
+(4, 'Joomla! Update Component Update Site', 'extension', 'http://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1435130283, ''),
+(5, 'at[tec] Update Server', 'extension', 'http://www.attec.at/joomla-updates/plg_system_less_update.xml', 1, 1435130283, ''),
+(6, 'K2 Updates', 'extension', 'http://getk2.org/update.xml', 1, 1435130283, '');
 
 -- --------------------------------------------------------
 
@@ -1953,7 +1973,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_usergroups` (
   `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
   `rgt` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set rgt.',
   `title` varchar(100) NOT NULL DEFAULT ''
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_usergroups`
@@ -1993,7 +2013,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_users` (
   `otpKey` varchar(1000) NOT NULL DEFAULT '' COMMENT 'Two factor authentication encrypted keys',
   `otep` varchar(1000) NOT NULL DEFAULT '' COMMENT 'One time emergency passwords',
   `requireReset` tinyint(4) NOT NULL DEFAULT '0' COMMENT 'Require user to reset password on next login'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=371 ;
+) ENGINE=InnoDB AUTO_INCREMENT=371 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_users`
@@ -2001,7 +2021,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_users` (
 
 INSERT INTO `mfpg7_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
 (369, 'Super User', 'saad', 'saad.com.tn@gmail.com', '$2y$10$mAjY/X9P2J6CH6GuqVPf7eR2yANFWUm9U7cAlwKDElWA/wmgOnIAq', 0, 1, '2015-06-23 12:57:59', '2015-06-23 12:58:41', '0', '', '0000-00-00 00:00:00', 0, '', '', 0),
-(370, 'jobrane', 'jobrane', 'jobrane@gmail.com', '$2y$10$jdKvj8rWApfoaD0UvdSbU.Dx16/qi7LLg.OVHfTqWzM9JCP.b/giK', 0, 0, '2015-06-23 12:59:44', '0000-00-00 00:00:00', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}', '0000-00-00 00:00:00', 0, '', '', 0);
+(370, 'jobrane', 'jobrane', 'jobrane@gmail.com', '$2y$10$jdKvj8rWApfoaD0UvdSbU.Dx16/qi7LLg.OVHfTqWzM9JCP.b/giK', 0, 0, '2015-06-23 12:59:44', '2015-06-24 09:21:17', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -2017,7 +2037,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_user_keys` (
   `invalid` tinyint(4) NOT NULL,
   `time` varchar(200) NOT NULL,
   `uastring` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2041,7 +2061,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_user_notes` (
   `review_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2087,7 +2107,7 @@ CREATE TABLE IF NOT EXISTS `mfpg7_viewlevels` (
   `title` varchar(100) NOT NULL DEFAULT '',
   `ordering` int(11) NOT NULL DEFAULT '0',
   `rules` varchar(5120) NOT NULL COMMENT 'JSON encoded access control.'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `mfpg7_viewlevels`
@@ -2115,7 +2135,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_assets` (
   `name` varchar(50) NOT NULL COMMENT 'The unique name for the asset.\n',
   `title` varchar(100) NOT NULL COMMENT 'The descriptive title for the asset.',
   `rules` varchar(5120) NOT NULL COMMENT 'JSON encoded access control.'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=60 ;
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_assets`
@@ -2235,7 +2255,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_banners` (
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` int(10) unsigned NOT NULL DEFAULT '0',
   `version` int(10) unsigned NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2258,7 +2278,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_banner_clients` (
   `purchase_type` tinyint(4) NOT NULL DEFAULT '-1',
   `track_clicks` tinyint(4) NOT NULL DEFAULT '-1',
   `track_impressions` tinyint(4) NOT NULL DEFAULT '-1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2307,7 +2327,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_categories` (
   `hits` int(10) unsigned NOT NULL DEFAULT '0',
   `language` char(7) NOT NULL,
   `version` int(10) unsigned NOT NULL DEFAULT '1'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_categories`
@@ -2372,7 +2392,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_contact_details` (
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `version` int(10) unsigned NOT NULL DEFAULT '1',
   `hits` int(10) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2411,7 +2431,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_content` (
   `featured` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Set if article is featured.',
   `language` char(7) NOT NULL COMMENT 'The language code for the article.',
   `xreference` varchar(50) NOT NULL COMMENT 'A reference to enable linkages to external data sets.'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2467,7 +2487,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_content_types` (
   `field_mappings` text NOT NULL,
   `router` varchar(255) NOT NULL DEFAULT '',
   `content_history_options` varchar(5120) DEFAULT NULL COMMENT 'JSON string for com_contenthistory options'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_content_types`
@@ -2525,7 +2545,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_extensions` (
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `ordering` int(11) DEFAULT '0',
   `state` int(11) DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10002 ;
+) ENGINE=InnoDB AUTO_INCREMENT=10002 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_extensions`
@@ -2696,7 +2716,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_finder_filters` (
   `map_count` int(10) unsigned NOT NULL DEFAULT '0',
   `data` text NOT NULL,
   `params` mediumtext
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2724,7 +2744,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_finder_links` (
   `sale_price` double unsigned NOT NULL DEFAULT '0',
   `type_id` int(11) NOT NULL,
   `object` mediumblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -2931,7 +2951,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_finder_taxonomy` (
   `state` tinyint(1) unsigned NOT NULL DEFAULT '1',
   `access` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `ordering` tinyint(1) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_finder_taxonomy`
@@ -2967,7 +2987,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_finder_terms` (
   `soundex` varchar(75) NOT NULL,
   `links` int(10) NOT NULL DEFAULT '0',
   `language` char(3) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -3247,7 +3267,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_finder_types` (
 `id` int(10) unsigned NOT NULL,
   `title` varchar(100) NOT NULL,
   `mime` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -3269,7 +3289,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_languages` (
   `published` int(11) NOT NULL DEFAULT '0',
   `access` int(10) unsigned NOT NULL DEFAULT '0',
   `ordering` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_languages`
@@ -3310,7 +3330,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_menu` (
   `home` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Indicates if this menu item is the home or default page.',
   `language` char(7) NOT NULL DEFAULT '',
   `client_id` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=106 ;
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_menu`
@@ -3358,7 +3378,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_menu_types` (
   `menutype` varchar(24) NOT NULL,
   `title` varchar(48) NOT NULL,
   `description` varchar(255) NOT NULL DEFAULT ''
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_menu_types`
@@ -3383,7 +3403,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_messages` (
   `priority` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `subject` varchar(255) NOT NULL DEFAULT '',
   `message` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -3422,7 +3442,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_modules` (
   `params` text NOT NULL,
   `client_id` tinyint(4) NOT NULL DEFAULT '0',
   `language` char(7) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=93 ;
+) ENGINE=InnoDB AUTO_INCREMENT=93 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_modules`
@@ -3528,7 +3548,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_newsfeeds` (
   `version` int(10) unsigned NOT NULL DEFAULT '1',
   `hits` int(10) unsigned NOT NULL DEFAULT '0',
   `images` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -3541,7 +3561,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_overrider` (
   `constant` varchar(255) NOT NULL,
   `string` text NOT NULL,
   `file` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -3564,7 +3584,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_postinstall_messages` (
   `condition_method` varchar(255) DEFAULT NULL COMMENT 'Display condition method, must return boolean',
   `version_introduced` varchar(50) NOT NULL DEFAULT '3.2.0' COMMENT 'Version when this message was introduced',
   `enabled` tinyint(3) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_postinstall_messages`
@@ -3592,7 +3612,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_redirect_links` (
   `published` tinyint(4) NOT NULL,
   `created_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -3674,7 +3694,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_tags` (
   `version` int(10) unsigned NOT NULL DEFAULT '1',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_tags`
@@ -3696,7 +3716,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_template_styles` (
   `home` char(7) NOT NULL DEFAULT '0',
   `title` varchar(255) NOT NULL DEFAULT '',
   `params` text NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_template_styles`
@@ -3761,7 +3781,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_ucm_content` (
   `core_catid` int(10) unsigned NOT NULL DEFAULT '0',
   `core_xreference` varchar(50) NOT NULL COMMENT 'A reference to enable linkages to external data sets.',
   `core_type_id` int(10) unsigned DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Contains core content data in name spaced fields' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Contains core content data in name spaced fields';
 
 -- --------------------------------------------------------
 
@@ -3780,7 +3800,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_ucm_history` (
   `sha1_hash` varchar(50) NOT NULL DEFAULT '' COMMENT 'SHA1 hash of the version_data column.',
   `version_data` mediumtext NOT NULL COMMENT 'json-encoded string of version data',
   `keep_forever` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0=auto delete; 1=keep'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -3803,7 +3823,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_updates` (
   `detailsurl` text NOT NULL,
   `infourl` text NOT NULL,
   `extra_query` varchar(1000) DEFAULT ''
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Available Updates' AUTO_INCREMENT=66 ;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8 COMMENT='Available Updates';
 
 --
 -- Contenu de la table `qqpfz_updates`
@@ -3890,7 +3910,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_update_sites` (
   `enabled` int(11) DEFAULT '0',
   `last_check_timestamp` bigint(20) DEFAULT '0',
   `extra_query` varchar(1000) DEFAULT ''
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Update Sites' AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Update Sites';
 
 --
 -- Contenu de la table `qqpfz_update_sites`
@@ -3936,7 +3956,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_usergroups` (
   `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
   `rgt` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set rgt.',
   `title` varchar(100) NOT NULL DEFAULT ''
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_usergroups`
@@ -3975,7 +3995,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_users` (
   `resetCount` int(11) NOT NULL DEFAULT '0' COMMENT 'Count of password resets since lastResetTime',
   `otpKey` varchar(1000) NOT NULL DEFAULT '' COMMENT 'Two factor authentication encrypted keys',
   `otep` varchar(1000) NOT NULL DEFAULT '' COMMENT 'One time emergency passwords'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=918 ;
+) ENGINE=InnoDB AUTO_INCREMENT=918 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_users`
@@ -3998,7 +4018,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_user_keys` (
   `invalid` tinyint(4) NOT NULL,
   `time` varchar(200) NOT NULL,
   `uastring` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -4022,7 +4042,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_user_notes` (
   `review_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -4066,7 +4086,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_viewlevels` (
   `title` varchar(100) NOT NULL DEFAULT '',
   `ordering` int(11) NOT NULL DEFAULT '0',
   `rules` varchar(5120) NOT NULL COMMENT 'JSON encoded access control.'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `qqpfz_viewlevels`
@@ -4114,7 +4134,7 @@ CREATE TABLE IF NOT EXISTS `qqpfz_weblinks` (
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `version` int(10) unsigned NOT NULL DEFAULT '1',
   `images` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Index pour les tables exportées
@@ -4992,7 +5012,7 @@ ALTER TABLE `qqpfz_weblinks`
 -- AUTO_INCREMENT pour la table `mfpg7_assets`
 --
 ALTER TABLE `mfpg7_assets`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',AUTO_INCREMENT=62;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',AUTO_INCREMENT=68;
 --
 -- AUTO_INCREMENT pour la table `mfpg7_banners`
 --
@@ -5022,12 +5042,12 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT pour la table `mfpg7_content_types`
 --
 ALTER TABLE `mfpg7_content_types`
-MODIFY `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10000;
+MODIFY `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT pour la table `mfpg7_extensions`
 --
 ALTER TABLE `mfpg7_extensions`
-MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10015;
+MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10017;
 --
 -- AUTO_INCREMENT pour la table `mfpg7_finder_filters`
 --
@@ -5127,7 +5147,7 @@ MODIFY `message_id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT pour la table `mfpg7_modules`
 --
 ALTER TABLE `mfpg7_modules`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=94;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=100;
 --
 -- AUTO_INCREMENT pour la table `mfpg7_newsfeeds`
 --
@@ -5157,7 +5177,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT pour la table `mfpg7_template_styles`
 --
 ALTER TABLE `mfpg7_template_styles`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `mfpg7_ucm_content`
 --
@@ -5172,7 +5192,7 @@ MODIFY `version_id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT pour la table `mfpg7_updates`
 --
 ALTER TABLE `mfpg7_updates`
-MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=61;
+MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=62;
 --
 -- AUTO_INCREMENT pour la table `mfpg7_update_sites`
 --

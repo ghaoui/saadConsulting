@@ -25,12 +25,8 @@
 		<folder>less</folder>
 	</files>
 	<positions>
-		<position>banner</position>
-		<position>header</position>
-		<position>debug</position>
 		<position>language</position>
 		<position>menu</position>
-		<position>breadcrumbs</position>
 		<position>carousel</position>
 		<position>presentation</position>
 		<position>sectionwork</position>
@@ -39,21 +35,6 @@
 		<position>footer</position>
 		<position>position-6</position>
 		<position>position-7</position>
-		<position>position-8</position>
-		<position>position-9</position>
-		<position>position-10</position>
-		<position>position-11</position>
-		<position>position-12</position>
-		<position>position-13</position>
-		<position>position-14</position>
-		<position>position-15</position>
-		<position>position-16</position>
-		<position>position-17</position>
-		<position>position-18</position>
-		<position>position-19</position>
-		<position>position-20</position>
-        <position>position-21</position>
-        <position>position-22</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.tpl_protostar.ini</language>
