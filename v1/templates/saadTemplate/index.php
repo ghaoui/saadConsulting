@@ -103,6 +103,7 @@ else
     <div class="container-fluid">
         <div class="row dichetnav menu">
             <div class="col-lg-2 col-md-1 col-sm-1 xs-hidden"></div>
+            <?php if ($this->countModules('menu')) : ?>
             <div class="col-lg-2  col-md-2 col-sm-3 col-xs-12 navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -110,12 +111,13 @@ else
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-               <a href="#" class="navbar-brand"> <?php echo $logo;?></a>
+               <a href="#" class="navbar-brand"><?php echo $logo;?></a>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-2 xs-hidden"></div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 collapse navbar-collapse" id="navbar-collapse">
                 <jdoc:include type="modules" name="menu" style="none" />
             </div>
+             <?php endif; ?>
             <div class="col-lg-1 col-md-1 col-sm-1 xs-hidden"></div>
         </div>
     </div>
