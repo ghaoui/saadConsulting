@@ -1786,6 +1786,11 @@
     margin-bottom: 5px;
   }
 }
+@media (max-width: 500px) {
+  .container-fluid .carousel .slide .grouptext {
+    margin-bottom: -10px;
+  }
+}
 .container-fluid .carousel .slide .grouptext h3 {
   font-size: 33px;
   font-family: 'nexa_light';
@@ -1797,6 +1802,11 @@
 @media (max-width: 767px) {
   .container-fluid .carousel .slide .grouptext h3 {
     font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .container-fluid .carousel .slide .grouptext h3 {
+    font-size: 10px;
   }
 }
 .container-fluid .carousel .slide .grouptext h2 {
@@ -1811,6 +1821,11 @@
 @media (max-width: 767px) {
   .container-fluid .carousel .slide .grouptext h2 {
     font-size: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .container-fluid .carousel .slide .grouptext h2 {
+    font-size: 15px;
   }
 }
 .container-fluid .carousel .slide .grouptext a {
@@ -1828,7 +1843,12 @@
 }
 @media (max-width: 767px) {
   .container-fluid .carousel .slide .grouptext a {
-    font-size: 13px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 500px) {
+  .container-fluid .carousel .slide .grouptext a {
+    font-size: 11px;
   }
 }
 .container-fluid .sectionwork {
@@ -1904,7 +1924,12 @@
 }
 @media (max-width: 767px) {
   .container-fluid .Blog .blogimg1 {
-    width: 95%;
+    width: 92%;
+  }
+}
+@media (max-width: 500px) {
+  .container-fluid .Blog .blogimg1 {
+    width: 115%;
   }
 }
 .container-fluid .Blog .blogimg1 img {

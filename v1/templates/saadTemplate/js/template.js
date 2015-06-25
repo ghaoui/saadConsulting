@@ -1,7 +1,7 @@
 jQuery(function(){
         jQuery("#demo").jcImgScroll({
             speed:200, 
-            width : 289, 
+            width : 300, 
             height:215, 
             setZoom:.5,
             loadClass:"loading", 
@@ -10,7 +10,7 @@ jQuery(function(){
             arrow : {  
                 width:110,
                 height:342,
-                x:220,
+                x:20,
                 y:0
             },
             count : 5,
@@ -18,4 +18,4 @@ jQuery(function(){
             NumBtn : true,
             title:true 
         });
-    });
+    }); 
