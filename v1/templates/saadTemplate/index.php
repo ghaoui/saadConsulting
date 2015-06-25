@@ -138,7 +138,7 @@ else
 <section id="presentation">
     <div class="container-fluid">
         <div class="row presentation ">
-        	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
+        	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center ">
 	        	<?php if ($this->countModules('presentation')) : ?>
 					<jdoc:include type="modules" name="presentation" style="none" />
 				<?php endif; ?>
@@ -160,7 +160,7 @@ else
 <section id="portfolio">
     <div class="container-fluid">
         <div class="row  portfolio">
-        	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
         		<?php if ($this->countModules('portfolio')) : ?>
 					<jdoc:include type="modules" name="portfolio" style="none" />
 				<?php endif; ?>
