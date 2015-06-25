@@ -41,12 +41,12 @@ else
 
 // Add JavaScript Frameworks
 //JHtml::_('bootstrap.framework');
-$doc->addScript('templates/' . $this->template . '/js/jquery-2.1.3.min.js');
+//$doc->addScript('templates/' . $this->template . '/js/jquery-1.11.0.min.js');
+$doc->addScript('templates/' . $this->template . '/js/bootstrap.min.js');
 $doc->addScript('templates/' . $this->template . '/js/ui.js');
-$doc->addScript('templates/' . $this->template . '/js/template.js');
 $doc->addScript('templates/' . $this->template . '/js/jQuery-jcImgScroll.js');
-$doc->addScript('templates/' . $this->template . '/js/jquery-1.11.0.min.js');
 $doc->addScript('templates/' . $this->template . '/js/main.js');
+$doc->addScript('templates/' . $this->template . '/js/template.js');
 
 
 
@@ -73,10 +73,11 @@ else
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<!-- Add Stylesheets -->
+    <jdoc:include type="head" />
 	<link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/bootstrap.min.css">
-	<link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/template.css">
-    <link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/jquery-ui.css">
-	<jdoc:include type="head" />
+	<link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/jquery-ui.css">
+    <link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/template.css">
+	
 
 	<!-- Add JavaScript 
 
