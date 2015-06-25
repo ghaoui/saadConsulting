@@ -45,6 +45,7 @@ $doc->addScript('templates/' . $this->template . '/js/jquery-2.1.3.min.js');
 $doc->addScript('templates/' . $this->template . '/js/ui.js');
 $doc->addScript('templates/' . $this->template . '/js/template.js');
 $doc->addScript('templates/' . $this->template . '/js/jQuery-jcImgScroll.js');
+$doc->addScript('templates/' . $this->template . '/js/jquery-1.11.0.min.js');
 $doc->addScript('templates/' . $this->template . '/js/main.js');
 
 
@@ -145,7 +146,7 @@ else
 </section>
 <section id="sectionwork">
     <div class="container-fluid">
-    	<div class="row petitboul sectionwork">
+    	<div class="row  sectionwork">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             	<?php if ($this->countModules('sectionwork')) : ?>
 					<jdoc:include type="modules" name="sectionwork" style="none" />
@@ -156,7 +157,7 @@ else
 </section>
 <section id="portfolio">
     <div class="container-fluid">
-        <div class="row bgportfolio portfolio">
+        <div class="row  portfolio">
         	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         		<?php if ($this->countModules('portfolio')) : ?>
 					<jdoc:include type="modules" name="portfolio" style="none" />
@@ -178,7 +179,7 @@ else
 </section>
 <footer>
     <div class="container-fluid">
-        <div class="row boulfooter footer">
+        <div class="row  footer">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             	<?php if ($this->countModules('footer')) : ?>
 					<jdoc:include type="modules" name="footer" style="none" />
