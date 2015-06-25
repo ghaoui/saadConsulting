@@ -41,15 +41,13 @@ else
 
 // Add JavaScript Frameworks
 //JHtml::_('bootstrap.framework');
-$doc->addScript('templates/' . $this->template . '/js/jquery-2.1.3.min.js');
+//$doc->addScript('templates/' . $this->template . '/js/jquery-2.1.3.min.js');
 $doc->addScript('templates/' . $this->template . '/js/bootstrap.min.js');
 $doc->addScript('templates/' . $this->template . '/js/ui.js');
 $doc->addScript('templates/' . $this->template . '/js/jQuery-jcImgScroll.js');
 $doc->addScript('templates/' . $this->template . '/js/main.js');
 $doc->addScript('templates/' . $this->template . '/js/template.js');
 // $doc->addScript('templates/' . $this->template . '/js/script.js');
-
-
 
 
 
@@ -74,7 +72,7 @@ else
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<!-- Add Stylesheets -->
-    <jdoc:include type="head" />
+    
 	<link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/bootstrap.min.css">
 	<link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/jquery-ui.css">
     <link rel="stylesheet" href="templates/<?php echo $this->template; ?>/css/template.css">
@@ -91,6 +89,7 @@ else
 	<!--[if lt IE 9]>
 		<script src="<?php echo $this->baseurl; ?>/media/jui/js/html5.js"></script>
 	<![endif]-->
+    <jdoc:include type="head" />
 </head>
 
 <body class="site <?php echo $option

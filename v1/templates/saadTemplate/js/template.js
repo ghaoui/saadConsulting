@@ -1,5 +1,5 @@
- $(function(){
-        $("#demo").jcImgScroll({
+jQuery(function(){
+        jQuery("#demo").jcImgScroll({
             speed:200, 
             width : 289, 
             height:215, 
