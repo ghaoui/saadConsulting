@@ -1719,7 +1719,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .container-fluid .menu .navbar-header button {
   background-color: #15161a;
@@ -1768,23 +1768,52 @@
   margin-left: -15px;
   margin-right: -15px;
 }
-.container-fluid .carousel .slide h3 {
-  font-size: 40px;
+.container-fluid .carousel .slide .grouptext {
+  margin-bottom: 140px;
+}
+@media (max-width: 1199px) {
+  .container-fluid .carousel .slide .grouptext {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 992px) {
+  .container-fluid .carousel .slide .grouptext {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .container-fluid .carousel .slide .grouptext {
+    margin-bottom: 5px;
+  }
+}
+.container-fluid .carousel .slide .grouptext h3 {
+  font-size: 33px;
   font-family: 'nexa_light';
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0px;
 }
-.container-fluid .carousel .slide h2 {
-  font-size: 50px;
+@media (max-width: 767px) {
+  .container-fluid .carousel .slide .grouptext h3 {
+    font-size: 20px;
+  }
+}
+.container-fluid .carousel .slide .grouptext h2 {
+  font-size: 44px;
   font-family: 'nexa_bold';
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0px;
+  padding-bottom: 10px;
 }
-.container-fluid .carousel .slide a {
+@media (max-width: 767px) {
+  .container-fluid .carousel .slide .grouptext h2 {
+    font-size: 30px;
+  }
+}
+.container-fluid .carousel .slide .grouptext a {
   color: #fff;
   border-radius: 5px;
   background-color: #e6423a;
@@ -1795,6 +1824,12 @@
   font-size: 14px;
   font-family: 'nexa_light';
   color: #f8f8f8;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .container-fluid .carousel .slide .grouptext a {
+    font-size: 13px;
+  }
 }
 .container-fluid .sectionwork {
   background-color: #1d1e22;
@@ -1927,6 +1962,7 @@
   font-family: 'nexa_light';
   font-size: 14px;
   text-decoration: none;
+  cursor: pointer;
   font-weight: bold;
 }
 @media (max-width: 767px) {
@@ -2233,6 +2269,7 @@
   color: #504e52;
   font-size: 15px;
   font-family: "Gudea";
+  cursor: pointer;
 }
 .container-fluid .footer .bgtransparanblack h5 {
   margin-top: 25px;

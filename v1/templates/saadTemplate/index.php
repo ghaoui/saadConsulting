@@ -41,12 +41,13 @@ else
 
 // Add JavaScript Frameworks
 //JHtml::_('bootstrap.framework');
-//$doc->addScript('templates/' . $this->template . '/js/jquery-1.11.0.min.js');
+$doc->addScript('templates/' . $this->template . '/js/jquery-1.11.0.min.js');
 $doc->addScript('templates/' . $this->template . '/js/bootstrap.min.js');
 $doc->addScript('templates/' . $this->template . '/js/ui.js');
 $doc->addScript('templates/' . $this->template . '/js/jQuery-jcImgScroll.js');
 $doc->addScript('templates/' . $this->template . '/js/main.js');
 $doc->addScript('templates/' . $this->template . '/js/template.js');
+// $doc->addScript('templates/' . $this->template . '/js/script.js');
 
 
 
